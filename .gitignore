@@ -1,0 +1,3 @@
+# add directories to ignore for source control here.
+node_modules
+dist
