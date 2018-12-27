@@ -12,7 +12,8 @@ export default function Header() {
     return (
         <div style={rootStyle}>
             <Button title={R.strings.appName}
-                titleStyle={headingStyle}/>
+                titleStyle={headingStyle}
+                hover={false}/>
             <HeaderLinks/>
         </div>
     )

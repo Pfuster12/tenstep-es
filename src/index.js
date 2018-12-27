@@ -22,7 +22,8 @@ export default function App() {
 const rootStyle = {
     display: 'flex',
     flex: 1,
-    flexDirection: 'column'
+    flexDirection: 'column',
+    alignItems: 'center'
 }
 
 // Render the application into the DOM, the div inside index.html
