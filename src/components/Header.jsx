@@ -24,14 +24,16 @@ export default function Header() {
 //
 const rootStyle = {
     display: 'flex',
-    height: '80px',
+    height: '5rem',
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'center'
 }
 
 // heading style,
 const headingStyle = {...R.styles.heading,
     fontSize: '36px',
     fontWeight: 'bold',
-    padding: '16px'
+    padding: '1rem'
 }

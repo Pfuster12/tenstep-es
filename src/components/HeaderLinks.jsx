@@ -11,22 +11,22 @@ export default function HeaderLinks() {
     // return views,
     return (
         <div style={rootStyle}>
-            <Button title={"About"} 
+            <Button title={R.strings.about_header} 
                 titleStyle={linkStyle}
                 hover={true}/>
-            <Button title={"Services"} 
+            <Button title={R.strings.services_header} 
                 titleStyle={linkStyle}
                 hover={true}/>
-            <Button title={"References"} 
+            <Button title={R.strings.references_header} 
                 titleStyle={linkStyle}
                 hover={true}/>
-            <Button title={"Resources"} 
+            <Button title={R.strings.resources_header} 
                 titleStyle={linkStyle}
                 hover={true}/>
-            <Button title={"Partners"} 
+            <Button title={R.strings.partners_header} 
                 titleStyle={linkStyle}
                 hover={true}/>
-            <Button title={"Contact"} 
+            <Button title={R.strings.contact_header} 
                 titleStyle={linkStyle}
                 hover={true}/>
         </div>
@@ -38,7 +38,6 @@ export default function HeaderLinks() {
 //
 const rootStyle = {
     display: 'flex',
-    flex: 1,
     alignItems: 'center',
     flexDirection: 'row',
 }
@@ -47,5 +46,5 @@ const rootStyle = {
 const linkStyle = {...R.styles.text,
     fontSize: '14px',
     fontWeight: 'bold',
-    padding: '16px',
+    padding: '1.5rem',
 }

@@ -2,11 +2,11 @@
 // Colours used in the project.
 //
 const colours = {
-    primary: '#21409A',
+    primary: '#032D4D',
     secondary: '#545454',
     accent: '#21409A',
     white: '#fff',
-    dark: '#021b2c',
+    dark: '#1C272B',
     lightGrey: '#fafafa',
     darkGrey: '#656565'
 }

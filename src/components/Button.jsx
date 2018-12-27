@@ -22,7 +22,7 @@ export default function Button(props) {
      */
     function handleOnMouseEnter(event) {
         // set the link color
-        setTextColor(R.colours.primary)
+        setTextColor(R.colours.accent)
     }
 
     /**

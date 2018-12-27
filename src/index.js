@@ -1,6 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/Header';
+import R from 'res/R';
+import Footer from './components/Footer';
+import Body from './components/Body';
 
 /**
  * The main App component.
@@ -12,6 +15,8 @@ export default function App() {
     return (
         <div style={rootStyle}>
             <Header/>
+            <Body/>
+            <Footer/>
         </div>
     )
 }
@@ -23,7 +28,7 @@ const rootStyle = {
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'stretch',
 }
 
 // Render the application into the DOM, the div inside index.html
