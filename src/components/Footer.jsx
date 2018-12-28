@@ -20,6 +20,7 @@ const rootStyle = {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
+    alignItems: 'center',
     minHeight: '5rem',
     backgroundColor: R.colours.primary
 }
