@@ -16,7 +16,6 @@ export default function App() {
         <div style={rootStyle}>
             <Header/>
             <Body/>
-            <Footer/>
         </div>
     )
 }

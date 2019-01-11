@@ -27,7 +27,7 @@ const rootStyle = {
 
 // heading style,
 const textStyle = {...R.styles.text,
-    fontSize: '14px',
+    fontSize: '0.7rem',
     color: R.colours.white,
     fontWeight: 'bold',
     padding: '1rem',

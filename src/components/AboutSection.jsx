@@ -9,7 +9,8 @@ export default function AboutSection() {
     // return views,
     return (
     <div style={rootStyle}>
-        <span style={textStyle}>About Section</span>
+        <span style={headingStyle}>About Section</span>
+        <span style={textStyle}>{R.strings.lorem_ipsum}</span>
     </div>
     )
 }
@@ -18,12 +19,25 @@ export default function AboutSection() {
 //
 const rootStyle = {
     display: 'flex',
+    flex: '0 0 400px',
     flexDirection: 'column',
+    padding: '2rem',
+    backgroundColor: '#1C272B',
+}
+
+// heading style,
+const headingStyle = {...R.styles.heading,
+    fontSize: '2rem',
     padding: '1rem',
+    fontWeight: 'bold',
+    color: R.colours.white
 }
 
 // heading style,
 const textStyle = {...R.styles.text,
-    fontSize: '20px',
+    width: '400px',
+    fontSize: '1rem',
     padding: '1rem',
+    color: R.colours.white,
+    textAlign: 'justify'
 }

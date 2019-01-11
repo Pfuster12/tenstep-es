@@ -33,7 +33,7 @@ const rootStyle = {
 
 // heading style,
 const headingStyle = {...R.styles.heading,
-    fontSize: '36px',
+    fontSize: '2.5rem',
     fontWeight: 'bold',
     padding: '1rem'
 }
