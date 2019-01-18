@@ -9,7 +9,7 @@ export default function ContactSection() {
     // return views,
     return (
     <div style={rootStyle}>
-        <span style={headingStyle}>Contact Us</span>
+        <span style={headingStyle}>Contact</span>
         <span style={textStyle}>{R.strings.contact_name_title}</span>
         <input style={inputStyle}/>
         <span style={textStyle}>{R.strings.contact_email_title}</span>

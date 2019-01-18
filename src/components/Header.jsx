@@ -2,6 +2,7 @@ import React from 'react';
 import R from 'res/R'
 import Button from './Button';
 import HeaderLinks from './HeaderLinks';
+import logo from '../assets/tenstep_logo.png'
 
 /**
  * The Header of the website.
@@ -13,7 +14,8 @@ export default function Header() {
         <div style={rootStyle}>
             <Button title={R.strings.appName}
                 titleStyle={headingStyle}
-                hover={false}/>
+                hover={false}
+                image={logo}/>
             <HeaderLinks/>
         </div>
     )

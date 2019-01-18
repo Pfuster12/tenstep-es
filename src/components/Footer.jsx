@@ -29,6 +29,5 @@ const rootStyle = {
 const textStyle = {...R.styles.text,
     fontSize: '0.7rem',
     color: R.colours.white,
-    fontWeight: 'bold',
     padding: '1rem',
 }

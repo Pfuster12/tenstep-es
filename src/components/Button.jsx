@@ -8,11 +8,10 @@ import R from 'res/R';
  */
 export default function Button(props) {
     // grab the props,
-    const { title, titleStyle, hover } = props
+    const { title, titleStyle, hover, image } = props
     
     // set the text color with state,
     const [textColor, setTextColor] = useState(R.colours.dark)
-
 
     // set the button color on hover,
 
@@ -38,19 +37,21 @@ export default function Button(props) {
         color: textColor
     }
 
+    const noImage =  hover ? 
+                    <div style={rootStyle}
+                        onMouseEnter={(event) => handleOnMouseEnter(event)}
+                        onMouseLeave={(event) => handleOnMouseLeave(event)}>
+                        <span style={textStyle}>{title}</span>
+                    </div>
+                    :
+                    <div style={rootStyle}>
+                        <span style={textStyle}>{title}</span>
+                    </div>
+
     // return views,
     return (
         <React.Fragment>
-            { hover ? 
-            <div style={rootStyle}
-                onMouseEnter={(event) => handleOnMouseEnter(event)}
-                onMouseLeave={(event) => handleOnMouseLeave(event)}>
-                <span style={textStyle}>{title}</span>
-            </div>
-            :
-            <div style={rootStyle}>
-                <span style={textStyle}>{title}</span>
-            </div>
+            { image === undefined ? noImage : <img style={imageStyle} src={image}></img>
             }
         </React.Fragment>
     )
@@ -61,4 +62,9 @@ export default function Button(props) {
 //
 const rootStyle = {
     cursor: 'pointer'
+}
+
+const imageStyle = {
+    width: '220px',
+    height: 'auto'
 }

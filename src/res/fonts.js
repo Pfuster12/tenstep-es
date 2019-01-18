@@ -3,7 +3,7 @@
 //
 const fonts = {
     title: 'Lato',
-    text: 'Lato'
+    text: 'Open Sans'
 }
 
 export default fonts
