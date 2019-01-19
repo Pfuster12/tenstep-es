@@ -1,15 +1,19 @@
 import React from 'react';
 import R from 'res/R';
+import rocket_service from '../assets/rocket_service.svg'
+import ServiceBox from './ServiceBox';
 /**
  * Displays the body Services section.
  * @function
  */
 export default function ServicesSection() {
+
+    //TODO a would you like to hear more from us. or request please sign in form little div not too high.
     // return views,
     return (
         <div style={rootStyle}>
-            <span style={headingStyle}>Services Section</span>
-            <span style={textStyle}>{R.strings.lorem_ipsum}</span>
+            <span style={headingStyle}>Our consulting services focus on innovation and economic development.</span>
+            <ServiceBox src={rocket_service}/>
         </div>
         )
     }
@@ -20,8 +24,7 @@ export default function ServicesSection() {
         display: 'flex',
         flex: '0 0 400px',
         flexDirection: 'column',
-        padding: '2rem',
-        backgroundColor: '#E9729D',
+        padding: '2rem'
     }
     
     // heading style,
@@ -29,14 +32,11 @@ export default function ServicesSection() {
         fontSize: '2rem',
         padding: '1rem',
         fontWeight: 'bold',
-        color: R.colours.white
-    }
+        textAlign: 'center'
+        }
     
     // heading style,
     const textStyle = {...R.styles.text,
-        width: '400px',
-        fontSize: '1rem',
-        padding: '1rem',
-        color: R.colours.white,
-        textAlign: 'justify'
+        width: '496px',
+        padding: '1rem'
     }

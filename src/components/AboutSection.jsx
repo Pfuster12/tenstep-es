@@ -62,8 +62,6 @@ const textStyle = {...R.styles.text,
     width: '496px',
     fontSize: '16px',
     padding: '1rem',
-    lineHeight: '26px',
-    opacity: 0.7,
     color: R.colours.darkGrey
 }
 
@@ -72,8 +70,6 @@ const text2Style = {...R.styles.text,
     width: '496px',
     paddingLeft: '1rem',
     fontSize: '16px',
-    lineHeight: '26px',
     margin: '0px',
-    opacity: 0.7,
     color: R.colours.darkGrey
 }

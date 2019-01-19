@@ -30,7 +30,8 @@ const rootStyle = {
     flexDirection: 'row',
     alignItems: 'center',
     alignContent: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    boxShadow: '0px 0px 4px grey'
 }
 
 // heading style,

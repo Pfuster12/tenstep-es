@@ -65,6 +65,7 @@ const rootStyle = {
 }
 
 const imageStyle = {
+    cursor: 'pointer',
     width: '220px',
     height: 'auto'
 }

@@ -9,7 +9,9 @@ const styles = {
     },
     text: {
         fontFamily: fonts.text,
-        fontSize: '14px'
+        fontSize: '16px',
+        lineHeight: '26px',
+        opacity: 0.7
     },
     buttonText: {
         fontFamily: fonts.text,

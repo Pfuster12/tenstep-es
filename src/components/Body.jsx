@@ -4,8 +4,8 @@ import Footer from './Footer';
 import ServicesSection from './ServicesSection';
 import ReferencesSection from './ReferencesSection';
 import ResourcesSection from './ResourcesSection';
-import ClientsSection from './ClientsSection';
 import ContactSection from './ContactSection';
+import PartnersSection from './PartnersSection';
 /**
  * Handles the website's body content.
  * @function
@@ -18,7 +18,7 @@ export default function Body() {
         <ServicesSection/>
         <ReferencesSection/>
         <ResourcesSection/>
-        <ClientsSection/>
+        <PartnersSection/>
         <ContactSection/>
         <Footer/>
     </div>
