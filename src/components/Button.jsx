@@ -33,9 +33,11 @@ export default function Button(props) {
         setTextColor(R.colours.dark)
     }
 
-    var textStyle = {...titleStyle,
+    var textStyle = hover ? {...titleStyle,
         color: textColor
     }
+    :
+    {...titleStyle}
 
     const noImage =  hover ? 
                     <div style={rootStyle}
@@ -51,7 +53,7 @@ export default function Button(props) {
     // return views,
     return (
         <React.Fragment>
-            { image === undefined ? noImage : <img style={imageStyle} src={image}></img>
+            { image === undefined ? noImage : <img style={titleStyle} src={image}></img>
             }
         </React.Fragment>
     )
@@ -62,10 +64,4 @@ export default function Button(props) {
 //
 const rootStyle = {
     cursor: 'pointer'
-}
-
-const imageStyle = {
-    cursor: 'pointer',
-    width: '220px',
-    height: 'auto'
 }

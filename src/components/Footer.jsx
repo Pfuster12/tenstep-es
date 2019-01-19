@@ -22,7 +22,7 @@ const rootStyle = {
     justifyContent: 'center',
     alignItems: 'center',
     minHeight: '5rem',
-    backgroundColor: R.colours.primary
+    backgroundColor: R.colours.primaryDarker
 }
 
 // heading style,

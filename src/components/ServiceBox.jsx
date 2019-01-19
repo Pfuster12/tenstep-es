@@ -7,15 +7,24 @@ import R from 'res/R';
  */
 export default function ServiceBox(props) {
     // get the props
-    const { src } = props
+    const { src, heading, text } = props
     // return views,
     return (
     <div style={rootStyle}>
         <img src={src}></img>
         <div style={textContainer}>
-        <p style={headingStyle}>Design and development</p>
-            <span style={textStyle}>We consult in the development of industrial and
-             science technology parks, incubation and technology centres.</span>
+            <p style={headingStyle}>{heading}</p>
+            <svg style={lineStyle} width={100} height={9}>
+                <line x1={0} y1={0} x2={200} y2={0} 
+                    style={
+                        { 
+                            stroke: '#FBF0F1',
+                            strokeWidth: '9px'
+                        }
+                    }>
+                </line>
+            </svg>
+            <span style={textStyle}>{text}</span>
         </div>
     </div>
     )
@@ -27,10 +36,13 @@ const rootStyle = {
     display: 'flex',
     width: '500px',
     height: 'auto',
-    padding: '1rem',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',
+}
+
+const lineStyle = {
+    marginLeft: '1rem'
 }
 
 const textContainer = {
@@ -45,12 +57,13 @@ const headingStyle = {...R.styles.heading,
     fontSize: '20px',
     padding: '1rem',
     margin: '0px',
-    fontWeight: '700'
+    fontWeight: '700',
+    color: R.colours.primaryDarker
 }
 
 // text style,
 const textStyle = {...R.styles.text,
     display: 'flex',
     fontSize: '16px',
-    padding: '1rem',  
+    padding: '0.5rem',  
 }

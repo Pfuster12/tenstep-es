@@ -14,8 +14,7 @@ export default function Header() {
         <div style={rootStyle}>
             <Button title={R.strings.appName}
                 titleStyle={headingStyle}
-                hover={false}
-                image={logo}/>
+                hover={false}/>
             <HeaderLinks/>
         </div>
     )
@@ -31,12 +30,14 @@ const rootStyle = {
     alignItems: 'center',
     alignContent: 'center',
     justifyContent: 'center',
+    backgroundColor: R.colours.primary,
     boxShadow: '0px 0px 4px grey'
 }
 
 // heading style,
 const headingStyle = {...R.styles.heading,
-    fontSize: '2.5rem',
+    fontSize: '2rem',
     fontWeight: 'bold',
-    padding: '1rem'
+    padding: '1rem',
+    color: R.colours.white
 }

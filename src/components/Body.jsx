@@ -6,6 +6,7 @@ import ReferencesSection from './ReferencesSection';
 import ResourcesSection from './ResourcesSection';
 import ContactSection from './ContactSection';
 import PartnersSection from './PartnersSection';
+import IntroSection from './IntroSection';
 /**
  * Handles the website's body content.
  * @function
@@ -14,6 +15,7 @@ export default function Body() {
     // return views,
     return (
     <div style={rootStyle}>
+        <IntroSection/>
         <AboutSection/>
         <ServicesSection/>
         <ReferencesSection/>
@@ -30,6 +32,7 @@ export default function Body() {
 const rootStyle = {
     display: 'flex',
     flex: 1,
+    alignItems: 'stretch',
     flexDirection: 'column',
     overflowY: 'scroll'
 }

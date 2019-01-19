@@ -18,7 +18,7 @@ export default function AboutSection() {
           generally by international institutions which foster economic development.</p>
         <p style={text2Style}>Combined with the expertise of Consortium members of other European 
         consulting firms we bid and implement international assignments in emerging countries.
-         Since 1999 we have garnered substantial experience in business innovation (especially the 
+         Since 1999 we have garnered substantial experience in business innovation —especially the 
          feasibility and support of innovation and entrepreneurship structures, such as science
           and technology parks and areas, incubation centres and hubs.</p>
         <div style={imagesContainerStyle}>
@@ -34,9 +34,11 @@ export default function AboutSection() {
 // Styles for the component.
 //
 const rootStyle = {
+    alignSelf: 'flex-start',
     display: 'flex',
-    flex: '0 0 600px',
+    flex: '0 0 auto',
     flexDirection: 'column',
+    minWidth: '0',
     padding: '2rem'
 }
 
