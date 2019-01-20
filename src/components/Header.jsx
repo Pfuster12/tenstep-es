@@ -31,7 +31,7 @@ const rootStyle = {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: R.colours.primaryDarker,
+    backgroundColor: R.colours.primary,
     boxShadow: '0px 0px 4px grey'
 }
 
@@ -41,6 +41,8 @@ const headingStyle = {...R.styles.heading,
     fontWeight: 'bold',
     paddingLeft: '1rem',
     marginRight: '1rem',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
     color: R.colours.white
 }
 
