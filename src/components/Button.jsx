@@ -8,10 +8,10 @@ import R from 'res/R';
  */
 export default function Button(props) {
     // grab the props,
-    const { title, titleStyle, hover, image } = props
+    const { title, titleStyle, hover, image, idleColor, hoverColor } = props
     
     // set the text color with state,
-    const [textColor, setTextColor] = useState(R.colours.dark)
+    const [textColor, setTextColor] = useState(idleColor)
 
     // set the button color on hover,
 
@@ -21,7 +21,7 @@ export default function Button(props) {
      */
     function handleOnMouseEnter(event) {
         // set the link color
-        setTextColor(R.colours.accent)
+        setTextColor(hoverColor)
     }
 
     /**
@@ -30,7 +30,7 @@ export default function Button(props) {
      */
     function handleOnMouseLeave(event) {
         // set the link color
-        setTextColor(R.colours.dark)
+        setTextColor(idleColor)
     }
 
     var textStyle = hover ? {...titleStyle,

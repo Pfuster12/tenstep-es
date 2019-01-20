@@ -8,7 +8,7 @@ export default function ReferencesSection() {
     // return views,
     return (
         <div style={rootStyle}>
-            <p style={headingStyle}>Tenstep Spain has lead over 100 assignments in emerging countries</p>
+            <p style={headingStyle}>Corporate Solutions has lead over 100 assignments in emerging countries</p>
             <span style={textStyle}>{R.strings.lorem_ipsum}</span>
         </div>
         )

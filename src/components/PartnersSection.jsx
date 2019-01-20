@@ -16,7 +16,7 @@ export default function PartnersSection() {
     // return views,
     return (
         <div style={rootStyle}>
-            <p style={headingStyle}>We are partnered with the right people</p>
+            <p style={headingStyle}>We work together with multiple international organisations</p>
             <span style={textStyle}>We are a Registered Education Provider 
             of both the International Association of Innovation Professionals
              and of the Project Management Institute.</span>

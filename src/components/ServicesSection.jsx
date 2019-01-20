@@ -21,15 +21,15 @@ export default function ServicesSection() {
                 src={rocket_service}/>
             <div style={endServiceContainerStyle}>
                 <ServiceBox heading={"Small and Medium Enterprise (SMEs)"}
-                    text={"We work with and support Small and Medium enterprise and consult on entrepreneurship policies and support programs."}
+                    text={"We work with and support Small and Medium Enterprise and consult on entrepreneurship policies and support programs."}
                     src={sme_service}/>
             </div>
             <ServiceBox heading={"Regional and Smart Strategies"}
-                text={"Our work with the EU Regional framework delivers Regional innovation strategies (RIS) and smart specialization strategies (S3)."}
+                text={"Our work with the EU Regional framework delivers Regional Innovation Strategies (RIS) and Smart Specialization Strategies (S3)."}
                 src={regional_service}/>
             <div style={endServiceContainerStyle}>
                 <ServiceBox heading={"Improving Business Environment"}
-                text={"Competitiveness, simplification and improvement of a country or region’s business environment"}
+                text={"Competitiveness, simplification and improvement of a country or region’s business environment is our goal."}
                 src={improve_service}/>
             </div>
         </div>

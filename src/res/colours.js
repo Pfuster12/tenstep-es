@@ -3,9 +3,10 @@
 //
 const colours = {
     primary: '#283E4E',
-    primaryDarker: '#032D4D',
+    primaryDarker: '#032B3A',
     secondary: '#545454',
-    accent: '#21409A',
+    accent: '#FF7256',
+    accentLighter: '#FF8066',
     white: '#fff',
     dark: '#1C272B',
     lightGrey: '#fafafa',

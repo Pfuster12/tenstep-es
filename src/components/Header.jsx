@@ -2,7 +2,7 @@ import React from 'react';
 import R from 'res/R'
 import Button from './Button';
 import HeaderLinks from './HeaderLinks';
-import logo from '../assets/tenstep_logo.png'
+import logo from '../assets/logo.svg'
 
 /**
  * The Header of the website.
@@ -12,7 +12,9 @@ export default function Header() {
     // return views,
     return (
         <div style={rootStyle}>
-            <Button title={R.strings.appName}
+             <Button image={logo}
+                titleStyle={imageStyle}/>
+            <Button title={R.strings.corpsolutions}
                 titleStyle={headingStyle}
                 hover={false}/>
             <HeaderLinks/>
@@ -24,13 +26,12 @@ export default function Header() {
 // Styles for the component.
 //
 const rootStyle = {
-    display: 'flex',
-    height: '5rem',
+    display: 'flex', 
+    height: '4.5rem',
     flexDirection: 'row',
     alignItems: 'center',
-    alignContent: 'center',
     justifyContent: 'center',
-    backgroundColor: R.colours.primary,
+    backgroundColor: R.colours.primaryDarker,
     boxShadow: '0px 0px 4px grey'
 }
 
@@ -38,6 +39,14 @@ const rootStyle = {
 const headingStyle = {...R.styles.heading,
     fontSize: '2rem',
     fontWeight: 'bold',
-    padding: '1rem',
+    paddingLeft: '1rem',
+    marginRight: '1rem',
     color: R.colours.white
+}
+
+// image style,
+const imageStyle = {...R.styles.heading,
+    width: '46px',
+    height: '50px',
+    cursor: 'pointer'
 }

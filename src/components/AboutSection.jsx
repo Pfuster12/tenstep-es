@@ -13,9 +13,11 @@ export default function AboutSection() {
     return (
     <div style={rootStyle}>
         <span style={headingStyle}>About Us</span>
-        <p style={textStyle}>TenStep Innovation Management, led by Corporate Solutions,
-         specializes in consulting and advisory services to win and manage projects funded
-          generally by international institutions which foster economic development.</p>
+        <p style={textStyle}> Corporate Solutions
+         specializes in consulting and advisory services to win and manage projects, funded
+          generally by international institutions which foster economic development. It is a TenStep
+           group practice is made up of several global offices led by Spain —which coordinates the practice—
+            plus TenStep offices in Tunisia, Poland, Guatemala, Ecuador.</p>
         <p style={text2Style}>Combined with the expertise of Consortium members of other European 
         consulting firms we bid and implement international assignments in emerging countries.
          Since 1999 we have garnered substantial experience in business innovation —especially the 
@@ -34,12 +36,13 @@ export default function AboutSection() {
 // Styles for the component.
 //
 const rootStyle = {
-    alignSelf: 'flex-start',
+    alignSelf: 'stretch',
     display: 'flex',
     flex: '0 0 auto',
     flexDirection: 'column',
     minWidth: '0',
-    padding: '2rem'
+    padding: '2rem',
+    //backgroundImage: 'linear-gradient(00deg, ##E6F8F7, #fff)'
 }
 
 // images div style
@@ -52,7 +55,7 @@ const imagesContainerStyle = {
 
 // heading style,
 const headingStyle = {...R.styles.heading,
-    fontSize: '2rem',
+    fontSize: '36px',
     paddingLeft: '1rem',
     paddingBottom: '1rem',
     fontWeight: 'bold',

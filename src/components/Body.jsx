@@ -33,6 +33,5 @@ const rootStyle = {
     display: 'flex',
     flex: 1,
     alignItems: 'stretch',
-    flexDirection: 'column',
-    overflowY: 'scroll'
+    flexDirection: 'column'
 }

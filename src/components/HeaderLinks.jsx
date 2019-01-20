@@ -13,22 +13,34 @@ export default function HeaderLinks() {
         <div style={rootStyle}>
             <Button title={R.strings.about_header} 
                 titleStyle={linkStyle}
-                hover={true}/>
+                hover={true}
+                idleColor={R.colours.white}
+                hoverColor={R.colours.accent}/>
             <Button title={R.strings.services_header} 
                 titleStyle={linkStyle}
-                hover={true}/>
+                hover={true}
+                idleColor={R.colours.white}
+                hoverColor={R.colours.accent}/>
             <Button title={R.strings.references_header} 
                 titleStyle={linkStyle}
-                hover={true}/>
+                hover={true}
+                idleColor={R.colours.white}
+                hoverColor={R.colours.accent}/>
             <Button title={R.strings.resources_header} 
                 titleStyle={linkStyle}
-                hover={true}/>
+                hover={true}
+                idleColor={R.colours.white}
+                hoverColor={R.colours.accent}/>
             <Button title={R.strings.partners_header} 
                 titleStyle={linkStyle}
-                hover={true}/>
+                hover={true}
+                idleColor={R.colours.white}
+                hoverColor={R.colours.accent}/>
             <Button title={R.strings.contact_header} 
                 titleStyle={linkStyle}
-                hover={true}/>
+                hover={true}
+                idleColor={R.colours.white}
+                hoverColor={R.colours.accent}/>
         </div>
     )
 }
@@ -45,6 +57,7 @@ const rootStyle = {
 // heading style,
 const linkStyle = {...R.styles.text,
     fontSize: '14px',
-    fontWeight: 'bold',
+    fontWeight: '700',
     padding: '1.5rem',
+    opacity: 1
 }
