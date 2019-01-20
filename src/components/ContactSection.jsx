@@ -29,7 +29,7 @@ const rootStyle = {
     flex: '0 0 600px',
     flexDirection: 'column',
     padding: '2rem',
-    backgroundColor: '#1C272B',
+    backgroundColor: R.colours.primary,
 }
 
 const inputStyle = {

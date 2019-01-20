@@ -27,8 +27,7 @@ const rootStyle = {
     display: 'flex',
     flex: 1,
     flexDirection: 'column',
-    alignItems: 'stretch',
-    overflowY: 'scroll'
+    alignItems: 'stretch'
 }
 
 // Render the application into the DOM, the div inside index.html
