@@ -30,6 +30,7 @@ export default function BigButton(props) {
     // define the style here to change button color on hover,
     const rootStyle = {
         display: 'flex',
+        flex: 1,
         justifyContent: 'center',
         borderRadius: '4px',
         height: height,

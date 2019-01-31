@@ -5,6 +5,7 @@ import rocket from '../assets/rocketto.svg'
 import MediaQuery from 'react-responsive'
 import bannerImage from "../assets/nestor-morales-587950-unsplash.jpg";
 import grain from "../assets/grain.png";
+import Header from './Header';
 
 
 /**
@@ -17,7 +18,8 @@ export default function IntroSection() {
     <div style={rootStyle}>
         <div style={grainContainer}>
         <div style={bannerDarkening}>
-        <p style={headingStyle}>Innovation and Economic Development Consulting in Emerging Countries</p>
+            <Header/>
+            <p style={headingStyle}>Innovation and Economic Development Consulting in Emerging Countries</p>
                 <p style={textStyle}>With work spanning more than 100 countries and the TenStep network, we can offer help in any part of the world.</p>
                 <div style={buttonContainerStyle}>
                 <BigButton text={"Contact and request resources"}
@@ -36,7 +38,7 @@ export default function IntroSection() {
 //
 const rootStyle = {
     display: 'flex',
-    flex: '0 0 500px',
+    flex: '0 0 660px',
     flexDirection: 'column',
     alignItems: 'stretch',
     backgroundColor: R.colours.primaryDarker,
@@ -49,13 +51,13 @@ const rootStyle = {
 
 const buttonContainerStyle = {
     display: 'flex',
-    flex: '0 0 250px',
+    flex: '0 0 50px',
     margin: '1rem'
 }
 
 const grainContainer = {
     display: 'flex',
-    flex: '0 0 500px',
+    flex: '0 0 660px',
     alignItems: 'stretch',
     flexDirection: 'column',
     backgroundSize: '100% auto',
@@ -64,7 +66,7 @@ const grainContainer = {
 
 const bannerDarkening = {
     display: 'flex',
-    flex: '0 0 436px',
+    flex: '0 0 596px',
     padding: '32px',
     flexDirection: 'column',
     alignItems: 'center',
@@ -87,6 +89,7 @@ const imageStyle = {
   const headingStyle = {...R.styles.heading,
     fontSize: '36px',
     padding: '1rem',
+    marginTop: '80px',
     fontWeight: '700',
     textAlign: 'center',
     fontFamily: 'Open Sans',

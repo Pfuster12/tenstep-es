@@ -8,7 +8,24 @@ import logo from '../assets/logo.svg'
  * The Header of the website.
  * @function
  */
-export default function Header() {
+export default function Header(props) {
+    // get the sticky prop
+    const { sticky } = props
+
+    //
+    // Styles for the component.
+    //
+    const rootStyle = {
+        display: 'flex',
+        height: '80px',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        position: sticky ? 'fixed' : 'auto',
+        zIndex: 2,
+        backgroundColor: sticky ? R.colours.darkGrey : '#00fff'
+    }
+
     // return views,
     return (
         <div style={rootStyle}>
@@ -20,19 +37,6 @@ export default function Header() {
             <HeaderLinks/>
         </div>
     )
-}
-
-//
-// Styles for the component.
-//
-const rootStyle = {
-    display: 'flex', 
-    height: '4.5rem',
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: R.colours.primary,
-    boxShadow: '0px 0px 4px grey'
 }
 
 // heading style,
