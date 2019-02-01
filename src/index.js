@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from './components/Header';
 import R from 'res/R';
-import Footer from './components/Footer';
 import Body from './components/Body';
 import { useState } from "react";
 import posed, { PoseGroup } from 'react-pose'
+import StickyHeader from './components/StickyHeader';
 
 /**
  * The main App component.
@@ -30,7 +30,7 @@ export default function App() {
     return (
         <div style={rootStyle}
             onScroll={(event) => handleScroll(event)}>
-            {sticky ? <Header sticky={true}/> : <div/>}
+            <StickyHeader sticky={sticky}/>
             <Body/>
         </div>
     )

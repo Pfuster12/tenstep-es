@@ -3,14 +3,13 @@ import R from 'res/R'
 import Button from './Button';
 import HeaderLinks from './HeaderLinks';
 import logo from '../assets/logo.svg'
+import posed, { PoseGroup } from 'react-pose'
 
 /**
  * The Header of the website.
  * @function
  */
 export default function Header(props) {
-    // get the sticky prop
-    const { sticky } = props
 
     //
     // Styles for the component.
@@ -21,16 +20,14 @@ export default function Header(props) {
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
-        position: sticky ? 'fixed' : 'auto',
         width: '100%',
         zIndex: 2,
-        backgroundColor: sticky ? R.colours.darkGrey : '#00fff'
     }
 
     // return views,
     return (
-        <div style={rootStyle}>
-             <Button image={logo}
+            <div style={rootStyle}>
+            <Button image={logo}
                 titleStyle={imageStyle}/>
             <Button title={R.strings.corpsolutions}
                 titleStyle={headingStyle}
