@@ -16,6 +16,7 @@
   "dependencies": {
     "react": "next",
     "react-dom": "next",
+    "react-pose": "^4.0.6",
     "react-responsive": "^6.0.1",
     "res": "file:src/res"
   },

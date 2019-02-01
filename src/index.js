@@ -5,6 +5,7 @@ import R from 'res/R';
 import Footer from './components/Footer';
 import Body from './components/Body';
 import { useState } from "react";
+import posed, { PoseGroup } from 'react-pose'
 
 /**
  * The main App component.
