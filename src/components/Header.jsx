@@ -24,7 +24,7 @@ export default function Header(props) {
         position: sticky ? 'fixed' : 'auto',
         width: '100%',
         zIndex: 2,
-        backgroundColor: sticky ? R.colours.darkGrey : '#00fff'
+        backgroundColor: sticky ? R.colours.primary : '#00fff'
     }
 
     // return views,
