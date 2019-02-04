@@ -21,8 +21,7 @@ export default function Header(props) {
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
-        zIndex: 2,
-        backgroundColor: sticky ? R.colours.primary : '#00fff'
+        zIndex: 2
     }
 
     // return views,

@@ -43,7 +43,7 @@ export default function StickyHeader(props) {
         position: 'fixed',
         width: '100%',
         zIndex: 2,
-        backgroundColor: R.colours.darkGrey
+        backgroundColor: R.colours.primary
     }
 
     // return views,

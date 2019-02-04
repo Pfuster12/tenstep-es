@@ -60,7 +60,8 @@ export default function ServicesSection() {
         fontSize: '2rem',
         padding: '1rem',
         fontWeight: 'bold',
-        textAlign: 'center'
+        textAlign: 'center',
+        color: R.colours.primary
         }
     
     // heading style,
