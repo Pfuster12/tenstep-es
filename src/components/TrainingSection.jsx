@@ -20,11 +20,17 @@ export default function TrainingSection() {
         <div style={rootStyle}>
         <div style={rowContainerStyle}>
             <Title title={"Our Training and Capacity Building Services"}
-                    text={"We are a Preferred/Registered Education Provider of both the International Association of Innovation Professionals (IAOIP.org) and of the Project Management Institute (PMI.org). We can prepare you for such certifications as Certified Innovation Professional or Innovation Management (IAOIP), Project Management Professional (PMP), Agile Project Management, Project Cycle Management, Monitoring and Evaluation...etc"}/>
+                    text={"We are a Preferred/Registered Education Provider of both the International Association of Innovation Professionals (IAOIP.org) and of the Project Management Institute (PMI.org). We can prepare you for such certifications as Certified Innovation Professional or Innovation Management (IAOIP), Project Management Professional (PMP), Agile Project Management, Project Cycle Management and Monitoring and Evaluation."}/>
            <div style={logosContainerStyle}>
-                <ImageButton src={iaoip}/>
-                <ImageButton src={pmi}/>
-                <ImageButton src={ecbl}/>
+                <ImageButton src={iaoip} 
+                    text={'IAIOP'} 
+                    link={'https://www.iaoip.org/page/Certification'}/>
+                <ImageButton src={pmi} 
+                    text={'Project Management Institute'}
+                    link={'https://www.pmi.org/certifications/types'}/>
+                <ImageButton src={ecbl} 
+                    text={'European Business Competence License'}
+                    link={'https://www.ebcl-international.eu'}/>
                </div>
         </div>
         </div>

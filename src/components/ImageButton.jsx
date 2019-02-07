@@ -6,9 +6,9 @@ import R from 'res/R';
  */
 export default function ImageButton(props) {
     // get src
-    const { src } = props
+    const { src, text, link } = props
 
-    const [shadowHeight, setShadowHeight] = useState('4px')
+    const [hover, setHover] = useState(false)
 
      /**
      * Handles the mouse entering the element.
@@ -16,7 +16,7 @@ export default function ImageButton(props) {
      */
     function handleOnMouseEnter(event) {
         // set the link color
-        setShadowHeight('10px')
+        setHover(true)
     }
 
     /**
@@ -25,7 +25,16 @@ export default function ImageButton(props) {
      */
     function handleOnMouseLeave(event) {
         // set the link color
-        setShadowHeight('4px')
+        setHover(false)
+    }
+
+    /**
+     * Handles the mouse clicking the element.
+     * @param {React.SyntheticEvent} event of the onMouseEnter.
+     */
+    function handleOnClick(event) {
+        // set the link to open in a new tab,
+        window.open(link, "_blank")
     }
 
     //
@@ -33,19 +42,22 @@ export default function ImageButton(props) {
     //
     const rootStyle = {
         display: 'flex',
-        wflex: 1,
+        flexDirection: 'column',
         alignSelf: 'center',
         height: 'auto',
-        margin: '16px',
-        padding: '10px'
+        margin: '8px',
+        padding: '10px',
+        cursor: 'pointer'
     }
 
     // return views,
     return (
     <div style={rootStyle}
         onMouseEnter={(event) => handleOnMouseEnter(event)}
-        onMouseLeave={(event) => handleOnMouseLeave(event)}>
+        onMouseLeave={(event) => handleOnMouseLeave(event)}
+        onClick={event => handleOnClick(event)}>
         <img style={imageStyle} src={src}></img>
+        {/*<span style={textStyle}>{text}</span>*/}
     </div>
     )
 }
@@ -56,10 +68,11 @@ const imageStyle = {
     width: '200px',
     alignSelf: 'center',
     height: 'auto',
-    margin: 'auto'
+    margin: '0px'
 }
 
 // heading style,
 const textStyle = {...R.styles.text,
-    padding: '1rem'
+    padding: '1rem',
+    textAlign: 'center'
 }

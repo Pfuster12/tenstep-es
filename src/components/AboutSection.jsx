@@ -4,30 +4,26 @@ import julioPic from '../assets/julio_profile.png'
 import albertoPic from '../assets/alberto_profile.jpg'
 import ProfileImage from './ProfileImage';
 import about_icons from "../assets/about_side_icons.svg";
+import Title from './Title';
 
 /**
  * Displays the About Section.
  * @function
  */
 export default function AboutSection() {
+
+    const aboutText = "Corporate Solutions specializes in consulting and advisory services to win and manage projects, funded generally by international institutions which foster economic development. It is a TenStep group practice is made up of several global offices led by Spain —which coordinates the practice— plus TenStep offices in Tunisia, Poland, Guatemala, Ecuador."
+    const aboutText2 = "Combined with the expertise of Consortium members of other European consulting firms we bid and implement international assignments in emerging countries. Since 1999 we have garnered substantial experience in business innovation —especially the feasibility and support of innovation and entrepreneurship structures, such as science and technology parks and areas, incubation centres and hubs."
     // return views,
     return (
     <div style={rootStyle}>
         <div style={rowStyle}>
             <div>
-                <span style={headingStyle}>About Us</span>
-                <p style={textStyle}> Corporate Solutions
-                specializes in consulting and advisory services to win and manage projects, funded
-                generally by international institutions which foster economic development. It is a TenStep
-                group practice is made up of several global offices led by Spain —which coordinates the practice—
-                    plus TenStep offices in Tunisia, Poland, Guatemala, Ecuador.</p>
-                <p style={text2Style}>Combined with the expertise of Consortium members of other European 
-                    consulting firms we bid and implement international assignments in emerging countries.
-                    Since 1999 we have garnered substantial experience in business innovation —especially the 
-                    feasibility and support of innovation and entrepreneurship structures, such as science
-                    and technology parks and areas, incubation centres and hubs.</p>
+            <Title title={"About Us"}
+                    text={aboutText}
+                    text2={aboutText2}/>
             </div>
-            <img style={aboutImageStyle} src={about_icons}></img>
+            
         </div>
         <div style={imagesContainerStyle}>
             <ProfileImage src={julioPic} text={"Julio Fuster"}/>

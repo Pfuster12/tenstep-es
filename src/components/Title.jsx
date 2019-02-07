@@ -6,7 +6,7 @@ import R from 'res/R';
  */
 export default function Title(props) {
     // get the text
-    const { title, text } = props
+    const { title, text, text2 } = props
     // return views,
     return (
     <div style={rootStyle}>
@@ -22,6 +22,7 @@ export default function Title(props) {
                 </line>
             </svg>
             <span style={textStyle}>{text}</span>
+            <span style={textStyle}>{text2}</span>
     </div>
     )
 }
