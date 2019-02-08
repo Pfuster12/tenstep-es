@@ -18,18 +18,16 @@ export default function AboutSection() {
     return (
     <div style={rootStyle}>
         <div style={rowStyle}>
-            <div>
-            <Title title={"About Us"}
-                    text={aboutText}
-                    text2={aboutText2}/>
+            <div style={columnStyle}>
+                <Title title={"About Us"}
+                        text={aboutText}
+                        text2={aboutText2}/>
+                <div style={imagesContainerStyle}>
+                    <ProfileImage src={julioPic} text={"Julio Fuster"}/>
+                </div>
             </div>
-            
-        </div>
-        <div style={imagesContainerStyle}>
-            <ProfileImage src={julioPic} text={"Julio Fuster"}/>
-            <ProfileImage src={albertoPic} text={"Alberto Gomez"}/>
-        </div>
-        
+           <div style={{width: '600px', height: '200px', backgroundColor: 'hotpink'}}></div> 
+        </div>    
     </div>
     )
 }
@@ -38,7 +36,7 @@ export default function AboutSection() {
 // Styles for the component.
 //
 const rootStyle = {
-    alignSelf: 'stretch',
+    alignSelf: 'center',
     display: 'flex',
     flex: '0 0 auto',
     flexDirection: 'column',
@@ -52,6 +50,13 @@ const rowStyle = {
     display: 'flex',
     flex: 1,
     flexDirection: 'row'
+}
+
+
+const columnStyle = {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'column'
 }
 
 // images div style

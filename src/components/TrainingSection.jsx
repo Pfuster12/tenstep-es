@@ -21,6 +21,7 @@ export default function TrainingSection() {
         <div style={rowContainerStyle}>
             <Title title={"Our Training and Capacity Building Services"}
                     text={"We are a Preferred/Registered Education Provider of both the International Association of Innovation Professionals (IAOIP.org) and of the Project Management Institute (PMI.org). We can prepare you for such certifications as Certified Innovation Professional or Innovation Management (IAOIP), Project Management Professional (PMP), Agile Project Management, Project Cycle Management and Monitoring and Evaluation."}/>
+           <div style={{width: '300px', height: '10px'}}></div>
            <div style={logosContainerStyle}>
                 <ImageButton src={iaoip} 
                     text={'IAIOP'} 
@@ -45,6 +46,7 @@ const rootStyle = {
     flex: '0 0 auto',
     flexDirection: 'column',
     padding: '2rem',
+    alignItems: 'center',
     backgroundImage: 'linear-gradient(0deg, #fff, rgba(96, 196, 176, 0.2))'
 }
 
@@ -57,6 +59,7 @@ const logosContainerStyle = {
 // row container
 const rowContainerStyle = {
     display: 'flex',
+    maxWidth: '1200px',
     flex: '1',
     alignItems: 'center',
     flexDirection: 'row',
