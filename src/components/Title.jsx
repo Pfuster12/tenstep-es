@@ -6,7 +6,24 @@ import R from 'res/R';
  */
 export default function Title(props) {
     // get the text
-    const { title, text, text2 } = props
+    const { title, text, text2, strokeColor } = props
+
+    // heading style,
+    const headingStyle = {...R.styles.heading,
+        fontSize: '42px',
+        maxWidth: '480px',
+        padding: '1rem',
+        fontWeight: 'bold',
+        color:  strokeColor !== undefined ? strokeColor : R.colours.primary
+    }
+
+    // heading style,
+    const textStyle = {...R.styles.text,
+        width: '500px',
+        padding: '1rem',
+        color: strokeColor !== undefined ? strokeColor : '#000'
+    }
+
     // return views,
     return (
     <div style={rootStyle}>
@@ -15,7 +32,7 @@ export default function Title(props) {
                 <line x1={0} y1={0} x2={200} y2={0} 
                     style={
                         { 
-                            stroke: R.colours.primary,
+                            stroke: strokeColor !== undefined ? strokeColor : R.colours.primary,
                             strokeWidth: '9px'
                         }
                     }>
@@ -37,19 +54,4 @@ const rootStyle = {
 
 const lineStyle = {
     marginLeft: '1rem'
-}
-
-// heading style,
-const headingStyle = {...R.styles.heading,
-    fontSize: '42px',
-    maxWidth: '480px',
-    padding: '1rem',
-    fontWeight: 'bold',
-    color: R.colours.primary
-    }
-
-// heading style,
-const textStyle = {...R.styles.text,
-    width: '500px',
-    padding: '1rem'
 }

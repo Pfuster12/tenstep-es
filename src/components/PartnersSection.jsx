@@ -6,7 +6,7 @@ import ecorys from '../assets/ecorys_logo.png'
 import dfc from '../assets/dfc_logo.png'
 import dai from '../assets/dai_logo.png'
 import ikei from '../assets/ikei_logo.png'
-
+import tenstep from '../assets/tenstep_logo.png'
 
 /**
  * Displays the body Services section.
@@ -22,6 +22,7 @@ export default function PartnersSection() {
              and of the Project Management Institute.</span>
              <span style={textStyle}>We also frequently team up with other consulting firms to form consortia for international assignments.</span>
              <div style={partnerImageContainer}>
+                <img style={tenstepImageStyle} src={tenstep}></img>
                 <img style={imageStyle} src={dfc}></img>
                 <img style={imageStyle} src={dai}></img>
                 <img style={imageStyle} src={ikei}></img>
@@ -56,6 +57,13 @@ const partnerImageContainer = {
 // partners container
 const imageStyle = {
     width: '100px',
+    height: 'auto',
+    margin: '1rem'
+}
+
+// partners container
+const tenstepImageStyle = {
+    width: '200px',
     height: 'auto',
     margin: '1rem'
 }

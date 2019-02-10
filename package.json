@@ -14,6 +14,7 @@
   ],
   "author": "Pablo Fuster",
   "dependencies": {
+    "@tippy.js/react": "^2.0.2",
     "react": "next",
     "react-dom": "next",
     "react-pose": "^4.0.6",

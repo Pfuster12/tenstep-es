@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import R from 'res/R';
+import Tippy from '@tippy.js/react'
+
 /**
 * Displays an image with text.
 * @function
  */
 export default function ImageButton(props) {
     // get src
-    const { src, text, link } = props
+    const { src, text, link, imageStyle, noText } = props
 
     const [hover, setHover] = useState(false)
 
@@ -37,6 +39,21 @@ export default function ImageButton(props) {
         window.open(link, "_blank")
     }
 
+    // create a tooltip with Tippy.js
+    const TooltipWithProps = () => (
+        <Tippy content={<span style={R.styles.text}>{text}</span>}
+            arrow={true}
+            theme={'light'}>
+            <div style={rootStyle}
+                onMouseEnter={(event) => handleOnMouseEnter(event)}
+                onMouseLeave={(event) => handleOnMouseLeave(event)}
+                onClick={event => handleOnClick(event)}>
+                <img style={imageStyle} src={src}></img>
+                { !noText ? <span style={textStyle}>{text}</span> : <React.Fragment/>}
+            </div>
+        </Tippy>
+      )
+
     //
     // Styles for the component.
     //
@@ -44,35 +61,28 @@ export default function ImageButton(props) {
         display: 'flex',
         flexDirection: 'column',
         alignSelf: 'center',
+        alignItems: 'center',
         height: 'auto',
         margin: '8px',
         padding: '10px',
-        cursor: 'pointer'
+        cursor: 'pointer',
+        backgroundColor: hover ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0)',
+        borderRadius: '6px'
     }
 
     // return views,
     return (
-    <div style={rootStyle}
-        onMouseEnter={(event) => handleOnMouseEnter(event)}
-        onMouseLeave={(event) => handleOnMouseLeave(event)}
-        onClick={event => handleOnClick(event)}>
-        <img style={imageStyle} src={src}></img>
-        {/*<span style={textStyle}>{text}</span>*/}
-    </div>
+    <React.Fragment>
+        <TooltipWithProps/>
+    </React.Fragment>
     )
-}
-
-// image container
-const imageStyle = {
-    display: 'flex',
-    width: '200px',
-    alignSelf: 'center',
-    height: 'auto',
-    margin: '0px'
 }
 
 // heading style,
 const textStyle = {...R.styles.text,
     padding: '1rem',
-    textAlign: 'center'
+    textAlign: 'center',
+    color: R.colours.white,
+    maxWidth: '300px',
+    maxHeight: '100px'
 }
