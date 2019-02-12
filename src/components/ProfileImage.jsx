@@ -5,7 +5,7 @@ import R from 'res/R';
 * @function
  */
 export default function ProfileImage(props) {
-    const { text, src } = props
+    const { text, src, location } = props
     // return views,
     return (
     <div style={rootStyle}>
@@ -13,6 +13,7 @@ export default function ProfileImage(props) {
             <img style={imageStyle} src={src}></img>
         </div>
         <span style={textStyle}>{text}</span>
+        <span style={text2Style}>{location}</span>
     </div>
     )
 }
@@ -23,6 +24,8 @@ export default function ProfileImage(props) {
 const rootStyle = {
     display: 'flex',
     flexDirection: 'column',
+    alignItems: 'center',
+    
     padding: '1rem'
 }
 
@@ -46,5 +49,13 @@ const textStyle = {...R.styles.text,
     fontSize: '1rem',
     paddingTop: '1rem',
     fontWeight: 'bold',
+    textAlign: 'center',
+    color: R.colours.darkGrey
+}
+
+// heading style,
+const text2Style = {...R.styles.text,
+    fontSize: '1rem',
+    textAlign: 'center',
     color: R.colours.darkGrey
 }

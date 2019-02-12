@@ -15,6 +15,10 @@ import notetechniquepdf from "../assets/note_technique_french.pdf";
 import entrepreneuriatpdf from "../assets/entrepreneuriat_valorisation_innovation.pdf";
 import competitivenesspdf from "../assets/competitiveness_factors.pdf";
 import sustainabilitypdf from "../assets/sustainability_methods.pdf";
+import fishingpdf from "../assets/euro_fishing.pdf";
+import maputopdf from "../assets/incubators_maputo.pdf";
+import devcentrespdf from "../assets/dev_centres_dfc.pdf";
+import SideScroller from './SideScroller';
 
 /**
  * Displays the body Services section.
@@ -22,7 +26,7 @@ import sustainabilitypdf from "../assets/sustainability_methods.pdf";
  */
 export default function ResourcesSection() {
 
-    const [visible, setVisible] = useState(false)
+    const [visible, setVisible] = useState(true)
 
         // image container
         const imageStyle = {
@@ -32,72 +36,77 @@ export default function ResourcesSection() {
             opacity: 0.8
         }
 
-    const ImageRow = posed.div({
-        visible: { opacity: 1 },
-        hidden: { opacity: 0 }
-    })
-
-    useEffect(() => {
-        setVisible(true)
-    },
-    [])
-
 
     // return views,
     return (
         <div style={rootStyle}>
              <div style={rowContainerStyle}>
-             <Title title={"Resources Section"}
+             <Title 
                 strokeColor={R.colours.white}
                 title={'Resources'}
-                text={'Read some of our latest work on technology and entrepreneurship. Download the PDFs here.'}/>
+                text={'Read some of our latest reports on technology and entrepreneurship. Download the PDFs here.'}/>
                 <div style={{width: '600px', height: '10x'}}></div>
              </div>
-            <ImageRow className={'images'}
-                pose={visible ? 'visible' : 'hidden'}>
-            <div style={imageRowStyle}>
-                <ImageButton src={pdf}
-                    imageStyle={imageStyle}
-                    text={'Incubators and Science parks in Africa 2018 (English)'} 
-                    link={incubatorpdf}/>
-                <ImageButton src={pdf}
-                    imageStyle={imageStyle}
-                    text={'Segmentacion de Centros tecnológicos UNIDO 2018 (Spanish)'} 
-                    link={segmentacionpdf}/>
-                <ImageButton src={pdf}
-                    imageStyle={imageStyle}
-                    text={'Conceptos fundamentales y modelos de Innovación empresarial 2018 (Spanish)'} 
-                    link={conceptospdf}/>
-            </div>
-            <div style={imageRowStyle}>
-                <ImageButton src={pdf}
-                    imageStyle={imageStyle}
-                    text={'Mentorship Manual for Young Entrepreneurs Turkey 2017 (English)'} 
-                    link={mentorshippdf}/>
-                <ImageButton src={pdf}
-                    imageStyle={imageStyle}
-                    text={'Technical Note on Governance and Financing of Technology or Industrial Technical Centres UNIDO 2016 (English)'} 
-                    link={technicalnotepdf}/>
-                <ImageButton src={pdf}
-                    imageStyle={imageStyle}
-                    text={'Note Technique sur le Statut Juridique et tutelle de Centres et instituts techniques UNIDO 2016 (French)'} 
-                    link={notetechniquepdf}/>
-            </div>
-            <div style={imageRowStyle}>
-                <ImageButton src={pdf}
-                    imageStyle={imageStyle}
-                    text={'Entrepreneuriat, Valorisation de la Recherche et de l‘Innovation pour les Référents des liaisons Univ-Industrie 2015 (French)'} 
-                    link={entrepreneuriatpdf}/>
-                <ImageButton src={pdf}
-                    imageStyle={imageStyle}
-                    text={'Competitiveness Factors - Models and Guidelines for Barbados 2015 (English)'} 
-                    link={competitivenesspdf}/>
-                <ImageButton src={pdf}
-                    imageStyle={imageStyle}
-                    text={'Sustainability Methods for Project appraisal and management 2014 (English)'} 
-                    link={sustainabilitypdf}/>
-            </div>
-            </ImageRow>
+             <SideScroller page1={<div className={'div-1'}>
+                    <div style={imageRowStyle} className={'child-1'}>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Incubators and Science parks in Africa 2018 (English)'} 
+                            link={incubatorpdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Segmentacion de Centros tecnológicos UNIDO 2018 (Spanish)'} 
+                            link={segmentacionpdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Conceptos fundamentales y modelos de Innovación empresarial 2018 (Spanish)'} 
+                            link={conceptospdf}/>
+                    </div>
+                    <div style={imageRowStyle} className={'child-2'}>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Mentorship Manual for Young Entrepreneurs Turkey 2017 (English)'} 
+                            link={mentorshippdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Technical Note on Governance and Financing of Technology or Industrial Technical Centres UNIDO 2016 (English)'} 
+                            link={technicalnotepdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Note Technique sur le Statut Juridique et tutelle de Centres et instituts techniques UNIDO 2016 (French)'} 
+                            link={notetechniquepdf}/>
+                    </div>
+                    </div>}
+                page2={<div className={'div-2'}>
+                    <div style={imageRowStyle} className={'child-3'}>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Entrepreneuriat, Valorisation de la Recherche et de l‘Innovation pour les Référents des liaisons Univ-Industrie 2015 (French)'} 
+                            link={entrepreneuriatpdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Competitiveness Factors - Models and Guidelines for Barbados 2015 (English)'} 
+                            link={competitivenesspdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Sustainability Methods for Project appraisal and management 2014 (English)'} 
+                            link={sustainabilitypdf}/>
+                    </div>
+                    <div style={imageRowStyle} className={'child-4'}>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Euro-Parliament Fishing Tourism in the EU Technical Note 2014 (English, in EU parliament web other languages)'} 
+                            link={fishingpdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Presentation of Pilot Business Incubators in Maputo and Machava in Mozambique 2011 (Portuguese)'} 
+                            link={maputopdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Business Development Centres in Development Services and Centres 1999 (English)'} 
+                            link={devcentrespdf}/>
+                    </div>
+                    </div>}/>
         </div>
         )
     }
@@ -110,6 +119,7 @@ export default function ResourcesSection() {
         flexDirection: 'column',
         padding: '2rem',
         alignItems: 'center',
+        overflow: 'hidden',
         backgroundImage: `linear-gradient(0deg, ${R.colours.primary}, ${R.colours.primaryDarker})`
     }
 

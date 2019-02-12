@@ -27,19 +27,19 @@ export default function Title(props) {
     // return views,
     return (
     <div style={rootStyle}>
-    <span style={headingStyle}>{title}</span>
-    <svg style={lineStyle} width={100} height={9}>
-                <line x1={0} y1={0} x2={200} y2={0} 
-                    style={
-                        { 
-                            stroke: strokeColor !== undefined ? strokeColor : R.colours.primary,
-                            strokeWidth: '9px'
-                        }
-                    }>
-                </line>
-            </svg>
-            <span style={textStyle}>{text}</span>
-            <span style={textStyle}>{text2}</span>
+        <span style={headingStyle}>{title}</span>
+        <svg style={lineStyle} width={100} height={9}>
+            <line x1={0} y1={0} x2={200} y2={0} 
+                style={
+                    { 
+                        stroke: strokeColor !== undefined ? strokeColor : R.colours.primary,
+                        strokeWidth: '9px'
+                    }
+                }>
+            </line>
+        </svg>
+        <span style={textStyle}>{text}</span>
+        {text2 !== undefined ? <span style={textStyle}>{text2}</span> : <React.Fragment/>}
     </div>
     )
 }

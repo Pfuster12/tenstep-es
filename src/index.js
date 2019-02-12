@@ -26,11 +26,47 @@ export default function App() {
         }
     }
 
+    // create a posed div,
+    const Container = posed.div({
+        enter: { 
+            y: '0px', 
+            opacity: 1, 
+            transition: {
+                duration: 500
+            }
+        },
+        exit: { 
+            y: '-200px', 
+            opacity: 0, 
+            transition: { 
+                duration: 500 
+            } 
+        }
+        })
+
+        const containerStyle = {
+            display: 'flex',
+            height: '80px',
+            flexDirection: 'row',
+            alignItems: 'center',
+            overflow: 'hidden',
+            justifyContent: 'center',
+            position: 'fixed',
+            width: '100%',
+            zIndex: 2,
+            backgroundColor: R.colours.primary
+        }
+    
+
     // return the App views,
     return (
         <div style={rootStyle}
             onScroll={(event) => handleScroll(event)}>
-            <StickyHeader sticky={sticky}/>
+            <PoseGroup>
+                {sticky && <Container style={containerStyle} key={'header'}>
+                    <StickyHeader key={'sticky-header'}/>
+                </Container>}
+            </PoseGroup>
             <Body/>
         </div>
     )

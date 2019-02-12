@@ -1,7 +1,13 @@
 import React from 'react';
 import R from 'res/R';
 import julioPic from '../assets/julio_profile.png'
-import albertoPic from '../assets/alberto_profile.jpg'
+import mochalPic from '../assets/tom_mochal.jpg'
+import kumarPic from '../assets/himanshu_kumar.jpg'
+import braggPic from '../assets/chris_bragg.png'
+import dickinsonPic from '../assets/dickinson.jpg'
+import hectorPic from '../assets/hector_perez.jpg'
+import josePic from '../assets/jfulle.jpg'
+import mohamedPic from '../assets/mohamed_ghodbane.jpg'
 import ProfileImage from './ProfileImage';
 import about_icons from "../assets/about_side_icons.svg";
 import Title from './Title';
@@ -17,16 +23,28 @@ export default function AboutSection() {
     // return views,
     return (
     <div style={rootStyle}>
-        <div style={rowStyle}>
-            <div style={columnStyle}>
+        <div style={columnStyle}>
+            <div style={rowStyle}>
                 <Title title={"About Us"}
                         text={aboutText}
                         text2={aboutText2}/>
-                <div style={imagesContainerStyle}>
-                    <ProfileImage src={julioPic} text={"Julio Fuster"}/>
-                </div>
+                <div style={{width: '600px', height: '200px', backgroundColor: 'hotpink'}}></div> 
             </div>
-           <div style={{width: '600px', height: '200px', backgroundColor: 'hotpink'}}></div> 
+            <span style={{...R.styles.text, 
+                paddingLeft: '16px', 
+                paddingTop: '16px', 
+                fontSize: '22px', 
+                fontWeight: 'bold'}}>Tenstep Partners</span>
+            <div style={imagesContainerStyle}>
+                    <ProfileImage src={julioPic} text={"Julio Fuster"} location={'Madrid, Europe'}/>
+                    <ProfileImage src={mochalPic} text={"Tom Mochal"} location={'Atlanta, USA'}/>
+                    <ProfileImage src={kumarPic} text={"Himanshu Kumar"} location={'New York, USA'}/>
+                    <ProfileImage src={braggPic} text={"Chris Bragg"} location={'Bahrain, Middle East'}/>
+                    <ProfileImage src={dickinsonPic} text={"Dickinson Agyapong"} location={'Ghana, West Africa'}/>
+                    <ProfileImage src={hectorPic} text={"Hector Perez"} location={'Guatemala, Central America'}/>
+                    <ProfileImage src={josePic} text={"Jose Gonzalez Fulle"} location={'Chile, South America'}/>
+                    <ProfileImage src={mohamedPic} text={"Mohamed Ghodbane"} location={'Tunisia, North Africa'}/>
+                </div>
         </div>    
     </div>
     )
@@ -62,7 +80,7 @@ const columnStyle = {
 // images div style
 const imagesContainerStyle = {
     display: 'flex',
-    flex: '0 0 200px',
+    flex: '0 0 auto',
     flexDirection: 'row',
     marginTop: '2rem'
 }

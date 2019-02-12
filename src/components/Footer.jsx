@@ -1,5 +1,6 @@
 import React from 'react';
 import R from 'res/R';
+
 /**
  * Handles the website's footer.
  * @function

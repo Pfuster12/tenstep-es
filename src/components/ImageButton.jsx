@@ -84,5 +84,5 @@ const textStyle = {...R.styles.text,
     textAlign: 'center',
     color: R.colours.white,
     maxWidth: '300px',
-    maxHeight: '100px'
+    height: '78px',
 }
