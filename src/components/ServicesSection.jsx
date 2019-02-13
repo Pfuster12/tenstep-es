@@ -40,7 +40,6 @@ export default function ServicesSection() {
     //
     const rootStyle = {
         display: 'flex',
-        minWidth: '0',
         alignSelf: 'center',
         maxWidth: '900px',
         flex: '0 0 auto',

@@ -18,7 +18,7 @@ export default function ReferencesSection() {
     //
     const rootStyle = {
         display: 'flex',
-        flex: '0 0 600px',
+        flex: '0 0 auto',
         alignItems: 'center',
         flexDirection: 'column',
         padding: '2rem'

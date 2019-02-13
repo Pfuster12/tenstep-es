@@ -8,9 +8,13 @@ import dickinsonPic from '../assets/dickinson.jpg'
 import hectorPic from '../assets/hector_perez.jpg'
 import josePic from '../assets/jfulle.jpg'
 import mohamedPic from '../assets/mohamed_ghodbane.jpg'
+import worldbank_logo from '../assets/world_bank.png'
+import idb_logo from '../assets/idb_logo.png'
+import european_comission from "../assets/european_comission.svg";
 import ProfileImage from './ProfileImage';
 import about_icons from "../assets/about_side_icons.svg";
 import Title from './Title';
+import ImageButton from './ImageButton'
 
 /**
  * Displays the About Section.
@@ -28,7 +32,23 @@ export default function AboutSection() {
                 <Title title={"About Us"}
                         text={aboutText}
                         text2={aboutText2}/>
-                <div style={{width: '600px', height: '200px', backgroundColor: 'hotpink'}}></div> 
+                <div style={{...columnStyle, marginTop: '32px'}}>
+                <ImageButton src={worldbank_logo} 
+                    imageStyle={imageStyle}
+                    text={'World Bank'}
+                    link={'https://www.worldbank.org/'}
+                    noText={true}/>
+                <ImageButton src={idb_logo} 
+                    imageStyle={imageStyleSmall}
+                    text={'Inter-American Development Bank'}
+                    link={'https://www.iadb.org/en'}
+                    noText={true}/>
+                <ImageButton src={european_comission} 
+                    imageStyle={{...imageStyleSmall, width: '250px'}}
+                    text={'European Comission'}
+                    link={'https://ec.europa.eu/commission/index_en'}
+                    noText={true}/>
+                </div> 
             </div>
             <span style={{...R.styles.text, 
                 paddingLeft: '16px', 
@@ -58,9 +78,8 @@ const rootStyle = {
     display: 'flex',
     flex: '0 0 auto',
     flexDirection: 'column',
-    minWidth: '0',
     padding: '2rem',
-    //backgroundImage: 'linear-gradient(00deg, ##E6F8F7, #fff)'
+    backgroundImage: 'linear-gradient(00deg, ##E6F8F7, #fff)'
 }
 
 const rowStyle = {
@@ -70,6 +89,13 @@ const rowStyle = {
     flexDirection: 'row'
 }
 
+const imageStyle = {
+    width: '400px'
+}
+
+const imageStyleSmall = {
+    width: '280px'
+}
 
 const columnStyle = {
     display: 'flex',

@@ -44,7 +44,6 @@ const headingStyle = {...R.styles.heading,
     paddingLeft: '1rem',
     marginRight: '1rem',
     textOverflow: 'ellipsis',
-    whiteSpace: 'nowrap',
     color: R.colours.white
 }
 
@@ -52,5 +51,6 @@ const headingStyle = {...R.styles.heading,
 const imageStyle = {...R.styles.heading,
     width: '46px',
     height: '50px',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    whiteSpace: 'nowrap'
 }

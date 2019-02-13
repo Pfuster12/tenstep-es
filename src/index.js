@@ -6,6 +6,8 @@ import Body from './components/Body';
 import { useState } from "react";
 import posed, { PoseGroup } from 'react-pose'
 import StickyHeader from './components/StickyHeader';
+import IntroSection from './components/IntroSection';
+import IntroSectionR from './components/IntroSectionR';
 
 /**
  * The main App component.
@@ -60,7 +62,7 @@ export default function App() {
 
     // return the App views,
     return (
-        <div style={rootStyle}
+        /*<div style={rootStyle}
             onScroll={(event) => handleScroll(event)}>
             <PoseGroup>
                 {sticky && <Container style={containerStyle} key={'header'}>
@@ -68,6 +70,12 @@ export default function App() {
                 </Container>}
             </PoseGroup>
             <Body/>
+        </div>*/
+        <div style={{backgroundColor: 'hotpink',
+            width: '100%',
+            height: '100%'}}>
+            <IntroSectionR/>
+
         </div>
     )
 }

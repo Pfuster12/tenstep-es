@@ -9,8 +9,11 @@ export default function Footer() {
     // return views,
     return (
     <div style={rootStyle}>
+    <div style={columnStyle}>
         <span style={textStyle}>{R.strings.tenstep_spain}</span>
         <span style={textStyle}>{R.strings.copyright}</span>
+    </div>
+        <a style={{...textStyle, padding: '0px', paddingBottom: '16px'}}>Privacy Policy</a>
     </div>
     )
 }
@@ -19,16 +22,21 @@ export default function Footer() {
 //
 const rootStyle = {
     display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
+    flex: '0 0 auto',
+    flexDirection: 'column',
     alignItems: 'center',
-    minHeight: '5rem',
     backgroundColor: R.colours.primaryDarker
+}
+
+const columnStyle = {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'row',
 }
 
 // heading style,
 const textStyle = {...R.styles.text,
-    fontSize: '0.7rem',
     color: R.colours.white,
-    padding: '1rem',
+    fontSize: '12px',
+    padding: '16px'
 }
