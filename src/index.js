@@ -6,8 +6,15 @@ import Body from './components/Body';
 import { useState } from "react";
 import posed, { PoseGroup } from 'react-pose'
 import StickyHeader from './components/StickyHeader';
-import IntroSection from './components/IntroSection';
 import IntroSectionR from './components/IntroSectionR';
+import AboutSectionR from './components/AboutSectionR';
+import ServicesSection from './components/ServicesSection';
+import TrainingSection from './components/TrainingSection';
+import ReferencesSection from './components/ReferencesSection';
+import ResourcesSection from './components/ResourcesSection';
+import PartnersSection from './components/PartnersSection';
+import Footer from './components/Footer';
+import ContactSection from './components/ContactSection';
 
 /**
  * The main App component.
@@ -71,24 +78,25 @@ export default function App() {
             </PoseGroup>
             <Body/>
         </div>*/
-        <div style={{backgroundColor: 'hotpink',
-            width: '100%',
-            height: '100%'}}>
-            <IntroSectionR/>
-
+        <div style={
+                {
+                    width: '100%',
+                    height: '100%',
+                    overflowY: 'scroll',
+                    alignItems: 'center'
+                }
+            }>
+                <IntroSectionR/>
+                <AboutSectionR/>
+                <ServicesSection/>
+                <TrainingSection/>
+                <ReferencesSection/>
+                <ResourcesSection/>
+                <PartnersSection/>
+                /<ContactSection/>
+                <Footer/>
         </div>
     )
-}
-
-//
-// Styles for the App component.
-//
-const rootStyle = {
-    display: 'flex',
-    flex: 1,
-    flexDirection: 'column',
-    alignItems: 'stretch',
-    overflowY: 'scroll'
 }
 
 // Render the application into the DOM, the div inside index.html

@@ -34,8 +34,7 @@ export default function ServiceBox(props) {
 //
 const rootStyle = {
     display: 'flex',
-    width: '500px',
-    height: 'auto',
+    maxWidth: '500px',
     justifyContent: 'center',
     alignItems: 'center',
     flexDirection: 'row',

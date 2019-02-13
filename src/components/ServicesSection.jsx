@@ -11,8 +11,6 @@ import ServiceBox from './ServiceBox';
  */
 export default function ServicesSection() {
 
-    //TODO a would you like to hear more from us. or request please sign in form little div not too high.
-    // return views,
     return (
         <div style={rootStyle}>
             <span style={headingStyle}>Our consulting services focus on innovation and economic development.</span>
@@ -40,11 +38,12 @@ export default function ServicesSection() {
     //
     const rootStyle = {
         display: 'flex',
-        alignSelf: 'center',
-        maxWidth: '900px',
-        flex: '0 0 auto',
+        flex: 1,
         flexDirection: 'column',
-        padding: '2rem'
+        margin: 'auto',
+        paddingBottom: '32px',
+        paddingLeft: '16px',
+        maxWidth: '1000px'
     }
 
     const endServiceContainerStyle = {
@@ -57,7 +56,7 @@ export default function ServicesSection() {
     // heading style,
     const headingStyle = {...R.styles.heading,
         fontSize: '2rem',
-        padding: '1rem',
+        padding: '32px',
         fontWeight: 'bold',
         textAlign: 'center',
         color: R.colours.primary

@@ -62,9 +62,8 @@ export default function ImageButton(props) {
         flexDirection: 'column',
         alignSelf: 'center',
         alignItems: 'center',
-        height: 'auto',
-        margin: '8px',
-        padding: '10px',
+        margin: '1vw',
+        padding: '1vw',
         cursor: 'pointer',
         backgroundColor: hover ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0)',
         borderRadius: '6px'
@@ -80,9 +79,12 @@ export default function ImageButton(props) {
 
 // heading style,
 const textStyle = {...R.styles.text,
-    padding: '1rem',
+    margin: '1vw',
     textAlign: 'center',
     color: R.colours.white,
     maxWidth: '300px',
-    height: '78px',
+    opacity: '0.9',
+    lineHeight: '24px',
+    maxHeight: '72px',
+    overflow: 'hidden'
 }

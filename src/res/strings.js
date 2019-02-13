@@ -6,7 +6,7 @@ const strings = {
     appName: 'Corporate Solutions',
     corpsolutions: 'corporate solutions',
     tenstep_spain: 'TenStep Spain',
-    copyright: 'Copyright © 2000-2019 TenStep - Corporate Solutions S.A.',
+    copyright: 'Copyright © 2000-2019 - Corporate Solutions S.A.',
     // header link titles,
     about_header: 'About',
     services_header: 'Services',

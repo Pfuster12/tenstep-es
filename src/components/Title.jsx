@@ -10,17 +10,18 @@ export default function Title(props) {
 
     // heading style,
     const headingStyle = {...R.styles.heading,
-        fontSize: '42px',
+        fontSize: 'calc(32px + 1vw)',
+        maxFontSize: '42px',
         maxWidth: '480px',
-        padding: '1rem',
+        padding: '16px',
         fontWeight: 'bold',
         color:  strokeColor !== undefined ? strokeColor : R.colours.primary
     }
 
     // heading style,
     const textStyle = {...R.styles.text,
-        width: '500px',
         padding: '1rem',
+        maxWidth: '480px',
         color: strokeColor !== undefined ? strokeColor : '#000'
     }
 

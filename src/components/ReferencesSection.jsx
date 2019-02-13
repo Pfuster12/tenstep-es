@@ -18,22 +18,23 @@ export default function ReferencesSection() {
     //
     const rootStyle = {
         display: 'flex',
-        flex: '0 0 auto',
+        flex: 1,
         alignItems: 'center',
         flexDirection: 'column',
-        padding: '2rem'
+        padding: '32px'
     }
     
     // heading style,
     const headingStyle = {...R.styles.heading,
         fontSize: '28px',
-        padding: '1rem',
+        padding: '2vw',
         fontWeight: '700',
+        textAlign: 'center'
     }
     
     // heading style,
     const textStyle = {...R.styles.text,
-        width: '400px',
+        maxWidth: '400px',
         fontSize: '1rem',
         padding: '1rem'
     }

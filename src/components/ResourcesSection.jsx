@@ -19,6 +19,7 @@ import fishingpdf from "../assets/euro_fishing.pdf";
 import maputopdf from "../assets/incubators_maputo.pdf";
 import devcentrespdf from "../assets/dev_centres_dfc.pdf";
 import SideScroller from './SideScroller';
+import MediaQuery from 'react-responsive'
 
 /**
  * Displays the body Services section.
@@ -31,8 +32,10 @@ export default function ResourcesSection() {
         // image container
         const imageStyle = {
             display: 'flex',
-            width: '100px',
-            height: '100px',
+            maxWidth: '100px',
+            maxHeight: '100px',
+            width: '18vw',
+            height: '18vw',
             opacity: 0.8
         }
 
@@ -45,8 +48,8 @@ export default function ResourcesSection() {
                 strokeColor={R.colours.white}
                 title={'Resources'}
                 text={'Read some of our latest reports on technology and entrepreneurship. Download the PDFs here.'}/>
-                <div style={{width: '600px', height: '10x'}}></div>
              </div>
+             <MediaQuery query="(min-width: 1000px)">
              <SideScroller page1={<div className={'div-1'}>
                     <div style={imageRowStyle} className={'child-1'}>
                         <ImageButton src={pdf}
@@ -107,6 +110,73 @@ export default function ResourcesSection() {
                             link={devcentrespdf}/>
                     </div>
                     </div>}/>
+             </MediaQuery>
+             <MediaQuery query="(max-width: 1000px)">
+             <SideScroller page1={<div className={'div-1'}>
+                    <div style={imageRowStyle} className={'child-1'}>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Incubators and Science parks in Africa 2018 (English)'} 
+                            link={incubatorpdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Segmentacion de Centros tecnológicos UNIDO 2018 (Spanish)'} 
+                            link={segmentacionpdf}/>
+                    </div>
+                    <div style={imageRowStyle} className={'child-2'}>
+                        <ImageButton src={pdf}
+                                imageStyle={imageStyle}
+                                text={'Conceptos fundamentales y modelos de Innovación empresarial 2018 (Spanish)'} 
+                                link={conceptospdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Mentorship Manual for Young Entrepreneurs Turkey 2017 (English)'} 
+                            link={mentorshippdf}/>
+                    </div>
+                    <div style={imageRowStyle} className={'child-2'}>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Technical Note on Governance and Financing of Technology or Industrial Technical Centres UNIDO 2016 (English)'} 
+                            link={technicalnotepdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Note Technique sur le Statut Juridique et tutelle de Centres et instituts techniques UNIDO 2016 (French)'} 
+                            link={notetechniquepdf}/>
+                    </div>
+                    </div>}
+                page2={<div className={'div-2'}>
+                    <div style={imageRowStyle} className={'child-3'}>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Entrepreneuriat, Valorisation de la Recherche et de l‘Innovation pour les Référents des liaisons Univ-Industrie 2015 (French)'} 
+                            link={entrepreneuriatpdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Competitiveness Factors - Models and Guidelines for Barbados 2015 (English)'} 
+                            link={competitivenesspdf}/>
+                    </div>
+                    <div style={imageRowStyle} className={'child-4'}>
+                    <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Sustainability Methods for Project appraisal and management 2014 (English)'} 
+                            link={sustainabilitypdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Euro-Parliament Fishing Tourism in the EU Technical Note 2014 (English, in EU parliament web other languages)'} 
+                            link={fishingpdf}/>
+                    </div>
+                    <div style={imageRowStyle} className={'child-4'}>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Presentation of Pilot Business Incubators in Maputo and Machava in Mozambique 2011 (Portuguese)'} 
+                            link={maputopdf}/>
+                        <ImageButton src={pdf}
+                            imageStyle={imageStyle}
+                            text={'Business Development Centres in Development Services and Centres 1999 (English)'} 
+                            link={devcentrespdf}/>
+                    </div>
+                    </div>}/>
+             </MediaQuery>
         </div>
         )
     }
@@ -115,9 +185,9 @@ export default function ResourcesSection() {
     //
     const rootStyle = {
         display: 'flex',
-        flex: '0 0 auto',
+        flex: 1,
         flexDirection: 'column',
-        padding: '2rem',
+        padding: '2vw',
         alignItems: 'center',
         overflow: 'hidden',
         backgroundImage: `linear-gradient(0deg, ${R.colours.primary}, ${R.colours.primaryDarker})`
@@ -128,30 +198,14 @@ export default function ResourcesSection() {
 const rowContainerStyle = {
     display: 'flex',
     maxWidth: '1200px',
-    flex: '1',
-    alignItems: 'center',
+    flex: 1,
+    paddingLeft: '10vw',
+    alignSelf: 'flex-start',
     flexDirection: 'row',
 }
 
-    const imageRowStyle = {
-        display: 'flex',
-        flex: 1,
-        flexDirection: 'row'
-    }
-    
-    // heading style,
-    const headingStyle = {...R.styles.heading,
-        fontSize: '2rem',
-        padding: '1rem',
-        fontWeight: 'bold',
-        color: R.colours.white
-    }
-    
-    // heading style,
-    const textStyle = {...R.styles.text,
-        width: '400px',
-        fontSize: '1rem',
-        padding: '1rem',
-        color: R.colours.white,
-        textAlign: 'justify'
-    }
+const imageRowStyle = {
+    display: 'flex',
+    flex: 1,
+    flexDirection: 'row'
+}

@@ -25,29 +25,30 @@ const rootStyle = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
-    
-    padding: '1rem'
+    padding: '16px'
 }
 
 // images div style
 const imageStyle = {
     display: 'block',
     height: 'auto',
-    width: '100px'
+    maxWidth: '100px'
 }
 
 const imageContainerStyle = {
-    height: '100px',
-    width: '100px',
     borderRadius: '50%',
+    width: '22vw',
+    height: '22vw',
+    maxWidth: '100px',
+    maxHeight: '100px',
     position: 'relative',
     overflow: 'hidden'
 }
 
 // heading style,
 const textStyle = {...R.styles.text,
-    fontSize: '1rem',
-    paddingTop: '1rem',
+    fontSize: '16px',
+    paddingTop: '16px',
     fontWeight: 'bold',
     textAlign: 'center',
     color: R.colours.darkGrey
@@ -55,7 +56,7 @@ const textStyle = {...R.styles.text,
 
 // heading style,
 const text2Style = {...R.styles.text,
-    fontSize: '1rem',
+    fontSize: '16px',
     textAlign: 'center',
     color: R.colours.darkGrey
 }

@@ -66,21 +66,11 @@ export default function SideScroller(props) {
     page === 1 ? setPage(2) : setPage(1)
  }
 
-   // chevron style,
-    const chevronStyle = {
-        display: 'flex',
-        flex: 1,
-        width: '60px',
-        backgroundColor: hoverLeft ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0)',
-        borderRadius: '6px',
-        cursor: 'pointer'
-    }
-
        // chevron style,
        const chevron2Style = {
         display: 'flex',
         flex: 1,
-        width: '60px',
+        minWidth: '60px',
         backgroundColor: hoverRight ? 'rgba(255, 255, 255, 0.1)' : 'rgba(255, 255, 255, 0)',
         borderRadius: '6px',
         cursor: 'pointer'
@@ -109,8 +99,8 @@ export default function SideScroller(props) {
     <div style={rootStyle}>
             <PoseGroup animateOnMount={false}>
                 {page === 1 ? 
-                     <Pager initialPose="enter" pose="exit" key={"pager"}>{page2}</Pager> 
-                     : <Pager initialPose="enter" pose="exit" key={'pager-2'}>{page1}</Pager>}   
+                     <Pager initialPose="enter" pose="exit" key={"pager"}>{page1}</Pager> 
+                     : <Pager initialPose="enter" pose="exit" key={'pager-2'}>{page2}</Pager>}   
             </PoseGroup>
         <img onMouseEnter={event => handleOnMouseEnterRight(event)} 
             onMouseLeave={event => handleOnMouseLeaveRight(event)}

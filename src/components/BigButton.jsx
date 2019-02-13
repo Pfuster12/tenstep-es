@@ -7,7 +7,7 @@ import R from 'res/R';
  */
 export default function BigButton(props) {
     // grab the props
-    const { text, color, highlightColor, width, height } = props
+    const { text, color, highlightColor, width, height, margin } = props
     // use state for the hover color,
     const [buttonColor, setButtonColor] = useState(color)
 
@@ -35,6 +35,7 @@ export default function BigButton(props) {
         borderRadius: '4px',
         height: height,
         width: width,
+        margin: margin,
         // set the color as state,
         backgroundColor: buttonColor,
         cursor: 'pointer'

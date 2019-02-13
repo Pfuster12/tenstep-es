@@ -7,6 +7,7 @@ import dfc from '../assets/dfc_logo.png'
 import dai from '../assets/dai_logo.png'
 import ikei from '../assets/ikei_logo.png'
 import tenstep from '../assets/tenstep_logo.png'
+import MediaQuery from 'react-responsive'
 
 /**
  * Displays the body Services section.
@@ -21,6 +22,7 @@ export default function PartnersSection() {
             of both the International Association of Innovation Professionals
              and of the Project Management Institute.</span>
              <span style={textStyle}>We also frequently team up with other consulting firms to form consortia for international assignments.</span>
+             <MediaQuery query="(min-width: 1000px)">
              <div style={partnerImageContainer}>
                 <img style={tenstepImageStyle} src={tenstep}></img>
                 <img style={imageStyle} src={dfc}></img>
@@ -30,6 +32,29 @@ export default function PartnersSection() {
                 <img style={imageStyle} src={ecorys}></img>
                 <img style={imageStyle} src={cowi}></img>
              </div>
+             </MediaQuery>
+             <MediaQuery query="(max-width: 1000px)">
+             <div style={
+                 {
+                     display: 'flex',
+                     flex: 1,
+                     flexDirection: 'column',
+                     alignItems: 'center'
+                 }
+             }>
+            <div style={partnerImageContainer}>
+                    <img style={tenstepImageStyle} src={tenstep}></img>
+                    <img style={imageStyle} src={dfc}></img>
+                    <img style={imageStyle} src={dai}></img>
+                    <img style={imageStyle} src={ikei}></img>
+             </div>
+             <div style={partnerImageContainer}>
+                    <img style={imageStyle} src={europe_aid}></img>
+                    <img style={imageStyle} src={ecorys}></img>
+                    <img style={imageStyle} src={cowi}></img>
+             </div>
+             </div>
+             </MediaQuery>
         </div>
     )
 }
@@ -39,47 +64,49 @@ export default function PartnersSection() {
 //
 const rootStyle = {
     display: 'flex',
-    flex: '0 0 400px',
+    flex: 1,
     alignItems: 'center',
     flexDirection: 'column',
-    padding: '2rem'
+    padding: '2vw'
 }
 
 // partners container
 const partnerImageContainer = {
     display: 'flex',
-    flex: '1',
+    flex: 1,
     alignItems: 'center',
     flexDirection: 'row',
-    padding: '1rem'
+    padding: '1vw'
 }
    
 // partners container
 const imageStyle = {
-    width: '100px',
+    width: '18vw',
+    maxWidth: '100px',
     height: 'auto',
-    margin: '1rem'
+    margin: '1vw'
 }
 
 // partners container
 const tenstepImageStyle = {
-    width: '200px',
+    width: '28vw',
+    maxWidth: '180px',
     height: 'auto',
-    margin: '1rem'
+    margin: '1vw'
 }
    
 // heading style,
 const headingStyle = {...R.styles.heading,
     fontSize: '28px',
-    padding: '1rem',
-    margin: '0px',
-    fontWeight: '700'
+    padding: '16px',
+    fontWeight: '700',
+    textAlign: 'center'
 }
 
 // heading style,
 const textStyle = {...R.styles.text,
     display: 'flex',
-    fontSize: '1rem',
-    padding: '1rem',
+    fontSize: '16px',
+    padding: '16px',
     textAlign: 'center'  
 }
