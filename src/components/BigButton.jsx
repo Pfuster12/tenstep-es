@@ -38,7 +38,7 @@ export default function BigButton(props) {
         margin: margin,
         // set the color as state,
         backgroundColor: buttonColor,
-        boxShadow: '0px 3px 12px #2f2f2f',
+        boxShadow: '0px 0px 12px #4f4f4f',
         cursor: 'pointer'
     }
 

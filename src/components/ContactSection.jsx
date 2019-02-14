@@ -82,7 +82,7 @@ const rootStyle = {
     flex: 1,
     padding: '32px',
     flexDirection: 'row',
-    backgroundImage: `linear-gradient(-5deg, ${R.colours.primaryDarker}, #26184f)`
+    backgroundImage: `linear-gradient(-2deg, ${R.colours.primaryDarker}, #26184f)`
 }
 //#333377
 

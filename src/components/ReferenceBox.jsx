@@ -7,7 +7,7 @@ import R from 'res/R';
  */
 export default function ReferenceBox(props) {
 
-    const { title, description } = props
+    const { title, description, src } = props
 
     const [hover, setHover] = useState(false)
 
@@ -40,19 +40,29 @@ export default function ReferenceBox(props) {
                 maxWidth: '400px',
                 margin: '16px',
                 padding: '24px',
-                background: hover ? '#E6FAF9' : '#ff000000',
+                background: hover ? 'rgba(230,250,249, 0.5)' : '#ff000000',
                 borderRadius: '10px',
                 cursor: 'pointer'
             }
         }
         onMouseEnter={event => handleOnMouseEnter(event)}
         onMouseLeave={event => handleOnMouseLeave(event)}>
+        <img 
+            style={
+                {
+                    width: '100px',
+                    height: '100px',
+                    alignSelf: 'center'
+                }
+            }
+            src={src}/>
         <span style={
             {
                 ...R.styles.heading,
                 fontSize: '24px',
                 color: R.colours.primary,
                 opacity: 1,
+                marginTop: '22px',
                 fontWeight: 'bold'
             }
         }>

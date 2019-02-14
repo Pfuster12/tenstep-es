@@ -2,6 +2,15 @@ import React from 'react';
 import R from 'res/R';
 import ReferenceBox from './ReferenceBox';
 import MediaQuery from 'react-responsive'
+import startup_rocket from '../assets/startup_rocket.svg'
+import microscope from '../assets/microscope.svg'
+import food_tech from '../assets/food_tech.svg'
+import uni_liaison from '../assets/uni_liason.svg'
+import trade from '../assets/trade.svg'
+import industrial_robot from '../assets/industrial_robot.svg'
+import government from '../assets/government.svg'
+import wind_farm from '../assets/wind_farm.svg'
+
 
 /**
  * Displays the body Services section.
@@ -21,14 +30,17 @@ export default function ReferencesSection() {
                 }
             }>
                 <ReferenceBox 
+                    src={startup_rocket}
                     title={'Turkey'}
                     description={'Support to Young Entrepreneurship in the Ankara region; Business Centres for promoting SMEs and investment in 6 regions at the Chambers of Commerce.'}/>
                 <ReferenceBox 
+                    src={microscope}
                     title={'Burkina Faso'}
-                    description={'Pre-feasibility Study of the first Technopole-Science Park in the Ouagadougou Capital.'}/>
+                    description={'Pre-feasibility Study of the first Technopolis-Science Park in the Ouagadougou Capital.'}/>
                 <ReferenceBox 
+                    src={food_tech}
                     title={'Cameroon'}
-                    description={' Foodtechnology Centre feasibility analysis.'}/>
+                    description={'Food technology Centre feasibility analysis.'}/>
             </div>
             <div style={
                 {
@@ -37,13 +49,16 @@ export default function ReferencesSection() {
                     flexDirection: 'row'
                 }
             }>
-                <ReferenceBox 
+                <ReferenceBox
+                    src={uni_liaison}
                     title={'Algeria'}
                     description={'Support to the universities‐enterprise technical and liaison centres for the Ministry of Education and Research '}/>
-                <ReferenceBox 
+                <ReferenceBox
+                    src={trade}
                     title={'West Africa'}
                     description={'Formulation of the regional trade program for the EU 10th EDF - Nigeria and Burkina Faso.'}/>
-                <ReferenceBox 
+                <ReferenceBox
+                    src={industrial_robot}
                     title={'Mozambique'}
                     description={'Evaluation of the Business Climate improvement strategy and SME support program of Ministry of Industry – appraisal of a project to support industrial investments and SMEs'}/>
             </div>
@@ -54,12 +69,14 @@ export default function ReferencesSection() {
                     flexDirection: 'row'
                 }
             }>
-                <ReferenceBox 
+                <ReferenceBox
+                    src={government}
                     title={'FYR Macedonia'}
                     description={'Training in IPA  funds management, PCM and project feasibility to staff of chambers, associations and of 10 government ministries.'}/>
-                <ReferenceBox 
+                <ReferenceBox
+                    src={wind_farm}
                     title={'Romania'}
-                    description={'Design and support of and Education) industrial clusters for Ministry of EU Integration; design and managemetn of six business incubators in regions  for Ministry of Natural Resources.'}/>
+                    description={'Design and support of industrial clusters for Ministry of EU Integration; design and management of six business incubators in regions for the Ministry of Natural Resources.'}/>
                 <ReferenceBox 
                     title={'Malta'}
                     description={'Innovation and SME development programme and training for Malta Enterprise.'}/>
@@ -95,8 +112,8 @@ export default function ReferencesSection() {
                     title={'Mexico'}
                     description={'Evaluation of SME and consumer support programmes within the EU-Mexico partnership programme.'}/>
                 <ReferenceBox 
-                    title={'more...'}
-                    description={"Read more references of our assignments."}
+                    title={'and more...'}
+                    description={"Follow us in Social Media to learn more."}
                    />
             </div>
             </MediaQuery>
@@ -108,16 +125,20 @@ export default function ReferencesSection() {
                     flexDirection: 'row'
                 }
             }>
-                <ReferenceBox 
+                <ReferenceBox
+                    src={startup_rocket}
                     title={'Turkey'}
                     description={'Support to Young Entrepreneurship in the Ankara region; Business Centres for promoting SMEs and investment in 6 regions at the Chambers of Commerce.'}/>
-                <ReferenceBox 
+                <ReferenceBox
+                    src={microscope}
                     title={'Burkina Faso'}
-                    description={'Pre-feasibility Study of the first Technopole-Science Park in the Ouagadougou Capital.'}/>
-                <ReferenceBox 
+                    description={'Pre-feasibility Study of the first Technopolis-Science Park in the Ouagadougou Capital.'}/>
+                <ReferenceBox
+                    src={food_tech}
                     title={'Cameroon'}
-                    description={' Foodtechnology Centre feasibility analysis.'}/>
-                <ReferenceBox 
+                    description={'Food technology Centre feasibility analysis.'}/>
+                <ReferenceBox
+                    src={uni_liaison}
                     title={'Algeria'}
                     description={'Support to the universities‐enterprise technical and liaison centres for the Ministry of Education and Research '}/>
                 
@@ -129,18 +150,22 @@ export default function ReferencesSection() {
                     flexDirection: 'row'
                 }
             }>
-                <ReferenceBox 
+                <ReferenceBox
+                    src={trade}
                     title={'West Africa'}
                     description={'Formulation of the regional trade program for the EU 10th EDF - Nigeria and Burkina Faso.'}/>
-                <ReferenceBox 
+                <ReferenceBox
+                    src={industrial_robot}
                     title={'Mozambique'}
                     description={'Evaluation of the Business Climate improvement strategy and SME support program of Ministry of Industry – appraisal of a project to support industrial investments and SMEs'}/>
-                <ReferenceBox 
+                <ReferenceBox
+                    src={government}
                     title={'FYR Macedonia'}
                     description={'Training in IPA  funds management, PCM and project feasibility to staff of chambers, associations and of 10 government ministries.'}/>
-                <ReferenceBox 
+                <ReferenceBox
+                    src={wind_farm}
                     title={'Romania'}
-                    description={'Design and support of and Education) industrial clusters for Ministry of EU Integration; design and managemetn of six business incubators in regions  for Ministry of Natural Resources.'}/>
+                    description={'Design and support of industrial clusters for Ministry of EU Integration; design and management of six business incubators in regions for the Ministry of Natural Resources.'}/>
                 
             </div>
             <div style={
@@ -178,8 +203,8 @@ export default function ReferencesSection() {
                     title={'Mexico'}
                     description={'Evaluation of SME and consumer support programmes within the EU-Mexico partnership programme.'}/>
                 <ReferenceBox 
-                    title={'more...'}
-                    description={"Read more references of our assignments."}
+                    title={'and more...'}
+                    description={"Follow us in Social Media to learn more."}
                    />
                 <ReferenceBox 
                     title={'         '}
@@ -206,6 +231,7 @@ export default function ReferencesSection() {
         fontSize: '40px',
         padding: '2vw',
         fontWeight: '700',
+        color: R.colours.primary,
         textAlign: 'center'
     }
     
