@@ -55,7 +55,7 @@ export default function ServicesSection() {
     
     // heading style,
     const headingStyle = {...R.styles.heading,
-        fontSize: '2rem',
+        fontSize: '40px',
         padding: '32px',
         fontWeight: 'bold',
         textAlign: 'center',
