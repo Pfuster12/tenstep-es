@@ -47,15 +47,17 @@ export default function ReferenceBox(props) {
         }
         onMouseEnter={event => handleOnMouseEnter(event)}
         onMouseLeave={event => handleOnMouseLeave(event)}>
-        <img 
-            style={
-                {
-                    width: '100px',
-                    height: '100px',
-                    alignSelf: 'center'
-                }
-            }
-            src={src}/>
+        { 
+            src !== undefined && <img 
+                                style={
+                                    {
+                                        width: '100px',
+                                        height: '100px',
+                                        alignSelf: 'center'
+                                    }
+                                }
+                                src={src}/>
+         }
         <span style={
             {
                 ...R.styles.heading,
