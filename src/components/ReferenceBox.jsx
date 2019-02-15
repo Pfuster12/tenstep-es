@@ -7,7 +7,7 @@ import R from 'res/R';
  */
 export default function ReferenceBox(props) {
 
-    const { title, description, src } = props
+    const { title, description, src, link } = props
 
     const [hover, setHover] = useState(false)
 
@@ -29,6 +29,16 @@ export default function ReferenceBox(props) {
         setHover(false)
     }
 
+    
+   /**
+    * Handles the onclick.
+    * @param {React.SyntheticEvent} event of the onMouseEnter.
+    */
+   function handleOnClick(event) {
+    // set the link to open in a new tab,
+    link !== undefined && window.open(link, "_blank")
+}
+
     // return views,
     return (
     <div style={
@@ -38,13 +48,14 @@ export default function ReferenceBox(props) {
                 flexDirection: 'column',
                 //justifyContent: 'center',
                 maxWidth: '400px',
-                margin: '16px',
-                padding: '24px',
+                margin: '1vw',
+                padding: '1vw',
                 background: hover ? 'rgba(230,250,249, 0.5)' : '#ff000000',
                 borderRadius: '10px',
                 cursor: 'pointer'
             }
         }
+        onClick={event => handleOnClick(event)}
         onMouseEnter={event => handleOnMouseEnter(event)}
         onMouseLeave={event => handleOnMouseLeave(event)}>
         { 

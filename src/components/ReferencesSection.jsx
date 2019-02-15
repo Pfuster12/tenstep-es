@@ -81,7 +81,10 @@ export default function ReferencesSection() {
                         src={consumer_support}
                         title={'Mexico'}
                         description={'Evaluation of SME and consumer support programmes within the EU-Mexico partnership programme.'}/>
-    const social = <ReferenceBox src={twitter} title={'And more...'} description={"Follow us in Social Media to learn more."}
+    const social = <ReferenceBox src={twitter} 
+                        title='And more...'
+                         description="Follow us in Social Media to learn more."
+                         link={'https://twitter.com/juliofuster?lang=en'}/>
 
     // return views,
     return (
@@ -159,7 +162,7 @@ export default function ReferencesSection() {
                 {mexico}
             </div>
             </MediaQuery>
-            <MediaQuery query="(max-width: 1000px; min-width: 600px)">
+            <MediaQuery maxWidth={1000} minWidth={600}>
             <div style={
                 {
                     flex: 1,
@@ -214,7 +217,7 @@ export default function ReferencesSection() {
                 {colombia}
                 {mexico}
                 {social}
-                   />
+                   
             </div>
             </MediaQuery>
             <MediaQuery query="(min-width: 1000px)">
