@@ -6,7 +6,18 @@ import MediaQuery from 'react-responsive'
  * Handles the website's footer.
  * @function
  */
-export default function Footer() {
+export default function Footer(props) {
+
+    const { policyCallback } = props
+
+    function openLinkedIn(event) {
+        window.open("https://www.linkedin.com/in/juliofuster", '_blank')
+    }
+
+    function openTwitter(event) {
+        window.open("https://twitter.com/juliofuster?lang=en", '_blank')
+    }
+
     // return views,
     return (
     <div style={rootStyle}>
@@ -22,8 +33,14 @@ export default function Footer() {
                 }
             }>{'Corporate Solutions S.A.'}</span>
             <span style={textStyle}>{R.strings.copyright}</span>
+            <span style={textStyle}>Calle Mauricio Legendre 6 7C, 28046, Madrid, Spain</span>
         </div>
-            <a style={{...textStyle,}}>Privacy Policy</a>
+        <div style={{display: 'flex'}}>
+        <span onClick={openLinkedIn} style={{...textStyle, fontWeight: 'bold', cursor: 'pointer'}}>Follow us in LinkedIn</span>
+        <span onClick={openTwitter} style={{...textStyle, fontWeight: 'bold', cursor: 'pointer'}}>Twitter</span>
+            </div>
+            <span onClick={policyCallback}
+             style={{...textStyle, fontWeight: 'bold', cursor: 'pointer',}}>Privacy Policy</span>
     </MediaQuery>
     <MediaQuery query="(max-width: 1000px)">
             <span style={{...R.styles.text,
@@ -34,7 +51,13 @@ export default function Footer() {
                     fontWeight: '700'
                 }}>{'Corporate Solutions S.A.'}</span>
             <span style={textStyle}>{R.strings.copyright}</span>
-            <a style={{...textStyle,}}>Privacy Policy</a>
+            <span style={textStyle}>Calle Mauricio Legendre 6, 7C, 28046, Madrid, Spain</span>
+            <div style={{display: 'flex'}}>
+                <span onClick={openLinkedIn} style={{...textStyle, fontWeight: 'bold', cursor: 'pointer'}}>Follow us in LinkedIn</span>
+                <span onClick={openTwitter} style={{...textStyle, fontWeight: 'bold', cursor: 'pointer'}}>Twitter</span>
+            </div>
+            <span style={{...textStyle, fontWeight: 'bold',cursor: 'pointer',}}
+                onClick={policyCallback}>Privacy Policy</span>
     </MediaQuery>
     </div>
     )
@@ -61,5 +84,6 @@ const columnStyle = {
 const textStyle = {...R.styles.text,
     color: R.colours.white,
     fontSize: '12px',
-    padding: '8px'
+    padding: '8px',
+    opacity: 0.8
 }

@@ -42,7 +42,7 @@ export default function ResourcesSection() {
 
     // return views,
     return (
-        <div style={rootStyle}>
+        <div className="resources" style={rootStyle}>
              <div style={rowContainerStyle}>
              <Title 
                 strokeColor={R.colours.white}

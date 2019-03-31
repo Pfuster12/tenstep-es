@@ -1,12 +1,12 @@
 import React from 'react';
-import bannerImage from "../assets/nestor-morales-587950-unsplash.jpg";
-import grain from "../assets/grain.png";
+import bannerImage from "../assets/topbanner.jpg";
 import R from 'res/R';
 import Header from './Header';
 import MediaQuery from 'react-responsive'
 import BigButton from './BigButton';
 import Button from './Button';
-import logo from '../assets/logo.svg'
+import logo_pyramid from '../assets/pyramid_logo.png'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 /**
  * Handles the intro section.
@@ -15,7 +15,7 @@ import logo from '../assets/logo.svg'
 export default function IntroSectionR() {
     // return views,
     return (
-    <div style={
+    <div className="intro" style={
         {
             display: 'flex',
             flex: 1,
@@ -34,7 +34,6 @@ export default function IntroSectionR() {
                 flex: 1,
                 flexDirection: 'column',
                 backgroundSize: 'cover',
-                backgroundImage: `url("${grain}")`,
             }
         }>
             {/* Darken background */}
@@ -44,31 +43,41 @@ export default function IntroSectionR() {
                     flex: 1,
                     flexDirection: 'column',
                     alignItems: 'center', 
-                    padding: '32px',
                     backgroundSize: 'cover',
-                    backgroundColor: 'rgba(36, 175, 99, 0.3)',
-                    backgroundImage: 'linear-gradient(-15deg, rgba(53, 68, 178, 0.2) , rgba(5, 85, 115, 0.6))'
+                    backgroundImage: 'linear-gradient(180deg, rgba(63, 120, 186, 0.96), rgba(63, 120, 186, 0.7))',
                 }
             }>
-                <MediaQuery query="(min-width: 1000px)">
-                    <Header/>
-                </MediaQuery>
-                <MediaQuery query="(max-width: 1000px)">
-                    <Button image={logo}
-                    titleStyle={imageStyle}/>
-                <Button title={R.strings.corpsolutions}
-                    titleStyle={headingStyle}
-                hover={false}/>
+                <MediaQuery query="(max-width: 900px)">
+                <div style={{
+                    display: 'flex', 
+                    flex: 1,
+                    width: '100%',
+                    backgroundColor: '#fff',
+                    height: 'auto',
+                    padding: '12px',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0px 2px 6px grey'
+                    }}>
+                              <Button image={logo_pyramid}
+                                titleStyle={imageStyle}/>
+                            <Button title={R.strings.corpsolutions}
+                                titleStyle={headingStyle}
+                            hover={false}/>
+                    </div>
                 </MediaQuery>
                 {/* The first header */}
                 <span style={
                     {
                         ...R.styles.heading,
                         textAlign: 'center',
-                        color: R.colours.white,
+                        color: '#F6F5EC',
                         // adds a min font size of 24px and the rest is viewport relative,
-                        fontSize: 'calc(26px + 1vw)',
-                        margin: '48px',
+                        fontSize: 'calc(30px + 1vw)',
+                        marginTop: '160px',
+                        marginBottom: '80px',
+                        marginLeft: '48px',
+                        marginRight: '48px',
                         opacity: 1,
                         fontWeight: 700,
                         lineHeight: '1.4em'
@@ -90,12 +99,16 @@ export default function IntroSectionR() {
                 }>
                     With work spanning more than 100 countries and the TenStep network, we can offer help in any part of the world.
                 </span>
+            <Link  activeClass="active" to="contact" spy={true} smooth={true} offset={-50} duration={500}>
                 <BigButton text={"Contact and request resources"}
-                    color={R.colours.accent}
-                    highlightColor={R.colours.accentLighter}
+                    color={R.colours.tenstepRedLighter}
+                    enabled={true}
+                    highlightColor={R.colours.tenstepRedLighterer}
                     width={'250px'}
                     height={'50px'}
-                    margin={'40px'}/>
+                    margin={'80px'}/>
+                    <div style={{height: '60px', maxWidth: '100px'}}/>
+                    </Link>
             </div>
         </div>
     </div>
@@ -104,18 +117,20 @@ export default function IntroSectionR() {
 
 // image style,
 const imageStyle = {...R.styles.heading,
-    width: '46px',
-    height: '50px',
+    width: '40px',
+    height: '34px',
+    padding: '12px',
     cursor: 'pointer',
     whiteSpace: 'nowrap'
 }
 
 // heading style,
 const headingStyle = {...R.styles.heading,
-    fontSize: '2rem',
+    fontSize: '34px',
     fontWeight: 'bold',
-    paddingLeft: '1rem',
+    paddingLeft: '2px',
+    marginTop: '24px',
     marginRight: '1rem',
     textOverflow: 'ellipsis',
-    color: R.colours.white
+    color: R.colours.tenstepBlue
 }

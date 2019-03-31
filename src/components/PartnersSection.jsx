@@ -8,15 +8,17 @@ import dai from '../assets/dai_logo.png'
 import ikei from '../assets/ikei_logo.png'
 import tenstep from '../assets/tenstep_logo.png'
 import MediaQuery from 'react-responsive'
+import PartnerLogo from './PartnerLogo';
 
 /**
  * Displays the body Services section.
  * @function
  */
 export default function PartnersSection() {
+
     // return views,
     return (
-        <div style={rootStyle}>
+        <div className="partners" style={rootStyle}>
             <p style={headingStyle}>We work together with multiple international organisations</p>
             <span style={textStyle}>We are a Registered Education Provider 
             of both the International Association of Innovation Professionals
@@ -24,13 +26,13 @@ export default function PartnersSection() {
              <span style={textStyle}>We also frequently team up with other consulting firms to form consortia for international assignments.</span>
              <MediaQuery query="(min-width: 1000px)">
              <div style={partnerImageContainer}>
-                <img style={tenstepImageStyle} src={tenstep}></img>
-                <img style={imageStyle} src={dfc}></img>
-                <img style={imageStyle} src={dai}></img>
-                <img style={imageStyle} src={ikei}></img>
-                <img style={imageStyle} src={europe_aid}></img>
-                <img style={imageStyle} src={ecorys}></img>
-                <img style={imageStyle} src={cowi}></img>
+             <PartnerLogo style={tenstepImageStyle} src={tenstep} link={'https://tenstep.com/'}/>
+                <PartnerLogo  style={imageStyle} src={dfc} link={'http://www.thedfcgroup.com/'}/>
+                <PartnerLogo  style={imageStyle} src={dai} link={'https://www.dai.com/'}/>
+                <PartnerLogo  style={imageStyle} src={ikei} link={'http://www.ikei.es/'}/>
+                <PartnerLogo  style={imageStyle} src={europe_aid} link={'https://ec.europa.eu/europeaid/node/22_en'}/>
+                <PartnerLogo  style={imageStyle} src={ecorys} link={'https://www.ecorys.com/'}/>
+                <PartnerLogo  style={imageStyle} src={cowi} link={'https://www.cowi.com/'}/>
              </div>
              </MediaQuery>
              <MediaQuery query="(max-width: 1000px)">
@@ -43,15 +45,15 @@ export default function PartnersSection() {
                  }
              }>
             <div style={partnerImageContainer}>
-                    <img style={tenstepImageStyle} src={tenstep}></img>
-                    <img style={imageStyle} src={dfc}></img>
-                    <img style={imageStyle} src={dai}></img>
-                    <img style={imageStyle} src={ikei}></img>
+            <PartnerLogo style={tenstepImageStyle} src={tenstep} link={'https://tenstep.com/'}/>
+                <PartnerLogo  style={imageStyle} src={dfc} link={'http://www.thedfcgroup.com/'}/>
+                <PartnerLogo  style={imageStyle} src={dai} link={'https://www.dai.com/'}/>
+                <PartnerLogo  style={imageStyle} src={ikei} link={'http://www.ikei.es/'}/>
              </div>
              <div style={partnerImageContainer}>
-                    <img style={imageStyle} src={europe_aid}></img>
-                    <img style={imageStyle} src={ecorys}></img>
-                    <img style={imageStyle} src={cowi}></img>
+             <PartnerLogo  style={imageStyle} src={europe_aid} link={'https://ec.europa.eu/europeaid/node/22_en'}/>
+                <PartnerLogo  style={imageStyle} src={ecorys} link={'https://www.ecorys.com/'}/>
+                <PartnerLogo  style={imageStyle} src={cowi} link={'https://www.cowi.com/'}/>
              </div>
              </div>
              </MediaQuery>
@@ -84,7 +86,8 @@ const imageStyle = {
     width: '18vw',
     maxWidth: '100px',
     height: 'auto',
-    margin: '1vw'
+    margin: '1vw',
+    cursor: 'pointer'
 }
 
 // partners container
@@ -92,13 +95,14 @@ const tenstepImageStyle = {
     width: '28vw',
     maxWidth: '180px',
     height: 'auto',
-    margin: '1vw'
+    margin: '1vw',
+    cursor: 'pointer'
 }
    
 // heading style,
 const headingStyle = {...R.styles.heading,
-    fontSize: '28px',
-    padding: '16px',
+    fontSize: '46px',
+    padding: '12px',
     fontWeight: '700',
     textAlign: 'center'
 }

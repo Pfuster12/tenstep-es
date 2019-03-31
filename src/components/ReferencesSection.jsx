@@ -17,6 +17,7 @@ import evaluation from '../assets/evaluation.svg'
 import technology_center from '../assets/technology_center.svg'
 import consumer_support from '../assets/consumer.svg'
 import twitter from '../assets/twitter.svg'
+import linkedin from '../assets/linkedin.svg'
 
 
 /**
@@ -85,10 +86,14 @@ export default function ReferencesSection() {
                         title='And more...'
                          description="Follow us in Social Media to learn more."
                          link={'https://twitter.com/juliofuster?lang=en'}/>
+    const social2 = <ReferenceBox src={linkedin} 
+                        title='LinkedIn'
+                        description="Follow us in LinkedIn"
+                        link={'https://www.linkedin.com/in/juliofuster'}/>
 
     // return views,
     return (
-        <div style={rootStyle}>
+        <div className="references" style={rootStyle}>
             <p style={headingStyle}>Corporate Solutions has lead over 100 assignments in emerging countries</p>
             <MediaQuery query="(max-width: 600px)">
             <div style={
@@ -267,9 +272,7 @@ export default function ReferencesSection() {
                     {colombia}
                     {mexico}
                     {social}
-                    <ReferenceBox 
-                    title={'         '}
-                    description={"                       "}/>
+                    {social2}
                 </div>
             </MediaQuery>
         </div>

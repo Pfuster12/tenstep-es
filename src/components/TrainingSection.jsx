@@ -28,7 +28,7 @@ export default function TrainingSection() {
     //TODO a would you like to hear more from us. or request please sign in form little div not too high.
     // return views,
     return (
-        <div style={
+        <div className="training" style={
             {
                 display: 'flex',
                 flex: '1',

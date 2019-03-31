@@ -11,7 +11,10 @@ export default function ServiceBox(props) {
     // return views,
     return (
     <div style={rootStyle}>
-        <img src={src}></img>
+        <img style={{
+            width: '180px',
+            height: '180px'
+        }} src={src}></img>
         <div style={textContainer}>
             <p style={headingStyle}>{heading}</p>
             <svg style={lineStyle} width={100} height={9}>

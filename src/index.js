@@ -14,90 +14,41 @@ import ReferencesSection from './components/ReferencesSection';
 import ResourcesSection from './components/ResourcesSection';
 import PartnersSection from './components/PartnersSection';
 import Footer from './components/Footer';
+import MediaQuery from 'react-responsive'
 import ContactSection from './components/ContactSection';
+import PrivacyPolicyDialog from './components/PrivacyPolicyDialog';
 
 /**
  * The main App component.
  * @function
  */
 export default function App() {
-    // use state for the sticky header
-    const [sticky, setSticky] = useState(false)
 
-    function handleScroll(event) {
-        console.log(event.currentTarget.scrollTop)
-        const scrollY = event.currentTarget.scrollTop
-        if (scrollY > 600) {
-            setSticky(true)
-        }
-        else {
-            setSticky(false)
-        }
+    const [showPolicy, setShowPolicy] = useState(false)
+
+    function policyCallback() {
+        setShowPolicy(true)
     }
 
-    // create a posed div,
-    const Container = posed.div({
-        enter: { 
-            y: '0px', 
-            opacity: 1, 
-            transition: {
-                duration: 500
-            }
-        },
-        exit: { 
-            y: '-200px', 
-            opacity: 0, 
-            transition: { 
-                duration: 500 
-            } 
-        }
-        })
-
-        const containerStyle = {
-            display: 'flex',
-            height: '80px',
-            flexDirection: 'row',
-            alignItems: 'center',
-            overflow: 'hidden',
-            justifyContent: 'center',
-            position: 'fixed',
-            width: '100%',
-            zIndex: 2,
-            backgroundColor: R.colours.primary
-        }
+    function closePolicy() {
+        setShowPolicy(false)
+    }
     
-
     // return the App views,
     return (
-        /*<div style={rootStyle}
-            onScroll={(event) => handleScroll(event)}>
-            <PoseGroup>
-                {sticky && <Container style={containerStyle} key={'header'}>
-                    <StickyHeader key={'sticky-header'}/>
-                </Container>}
-            </PoseGroup>
-            <Body/>
-        </div>*/
         <div style={
                 {
-                    width: '100%',
-                    height: '100%',
-                    overflowY: 'scroll',
-                    alignItems: 'center'
+                    alignItems: 'center',
                 }
             }>
-                <IntroSectionR/>
-                <AboutSectionR/>
-                <ServicesSection/>
-                <TrainingSection/>
-                <ReferencesSection/>
-                <ResourcesSection/>
-                <PartnersSection/>
-                /<ContactSection/>
-                <Footer/>
+             <MediaQuery query="(min-width: 900px)">
+                    <Header/>
+                </MediaQuery>
+                {showPolicy ? <PrivacyPolicyDialog hidePolicy={closePolicy}/> : <React.Fragment/>}
+               <Body policyCallback={policyCallback}/>
         </div>
     )
 }
 
 // Render the application into the DOM, the div inside index.html
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App/>, document.getElementById('root'))

@@ -13,6 +13,7 @@ import idb_logo from '../assets/idb_logo.png'
 import european_comission from "../assets/european_comission.svg";
 import ProfileImage from './ProfileImage';
 import Title from './Title';
+import slope from '../assets/sloping_up.svg'
 import ImageButton from './ImageButton'
 import MediaQuery from 'react-responsive'
 
@@ -23,17 +24,20 @@ import MediaQuery from 'react-responsive'
 export default function AboutSectionR() {
 
     // About Text,
-    const aboutText = "Corporate Solutions specializes in consulting and advisory services to win and manage projects, funded generally by international institutions which foster economic development. It is a TenStep group practice is made up of several global offices led by Spain —which coordinates the practice— plus TenStep offices in Tunisia, Poland, Guatemala, Ecuador."
+    const aboutText = "Corporate Solutions specializes in consulting and advisory services to win and manage projects, funded generally by international institutions which foster economic development. It is a TenStep group practice is made up of several global offices led by Spain, which coordinates the group's practice, plus TenStep offices in Tunisia, Poland, Guatemala, Ecuador."
     const aboutText2 = "Combined with the expertise of Consortium members of other European consulting firms we bid and implement international assignments in emerging countries. Since 1999 we have garnered substantial experience in business innovation —especially the feasibility and support of innovation and entrepreneurship structures, such as science and technology parks and areas, incubation centres and hubs."
 
     return (
-        <div style={
+        <div className="about" style={
             {
                 display: 'flex',
                 flex: 1,
                 flexDirection: 'column',
-                margin: 'calc(16px + 2vw)',
+                padding: 'calc(16px + 2vw)',
                 //maxWidth: '1200px',
+                background: `url(${slope}) -200px no-repeat`,
+                backgroundSize: 'cover',
+                backgroundPosition: '0px 200px',
                 alignItems: 'center'
             }
         }>
@@ -55,7 +59,7 @@ export default function AboutSectionR() {
                         marginLeft: '8vw'
                     }
                 }>
-                    <MediaQuery query="(min-width: 1000px)">
+                    <MediaQuery query="(min-width: 1100px)">
                         <ImageButton src={worldbank_logo} 
                             imageStyle={{width: '360px'}}
                             text={'World Bank'}
@@ -81,7 +85,7 @@ export default function AboutSectionR() {
                     flexDirection: 'row'
                 }
             }>
-                <MediaQuery query="(max-width: 1000px)">
+                <MediaQuery query="(max-width: 1100px)">
                     <ImageButton src={worldbank_logo} 
                         imageStyle={imageStyle}
                         text={'World Bank'}
@@ -109,7 +113,7 @@ export default function AboutSectionR() {
                             }>
                                 Tenstep Partners
                 </span>
-            <MediaQuery query="(min-width: 1000px)">
+            <MediaQuery query="(min-width: 1100px)">
                 <div style={
                     {
                         display: 'flex',
@@ -128,7 +132,7 @@ export default function AboutSectionR() {
                     <ProfileImage src={mohamedPic} text={"Mohamed Ghodbane"} location={'Tunisia, North Africa'}/>
                 </div>
             </MediaQuery>
-            <MediaQuery query="(max-width: 1000px)">
+            <MediaQuery query="(max-width: 1100px)">
             <div style={
                 {
                     display: 'flex',

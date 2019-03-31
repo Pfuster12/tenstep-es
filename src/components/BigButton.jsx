@@ -7,7 +7,7 @@ import R from 'res/R';
  */
 export default function BigButton(props) {
     // grab the props
-    const { text, color, highlightColor, width, height, margin } = props
+    const { onClick, text, color, highlightColor, width, height, margin, shadow, enabled } = props
     // use state for the hover color,
     const [buttonColor, setButtonColor] = useState(color)
 
@@ -30,15 +30,15 @@ export default function BigButton(props) {
     // define the style here to change button color on hover,
     const rootStyle = {
         display: 'flex',
-        flex: 1,
+        flex: '0 0 1',
         justifyContent: 'center',
         borderRadius: '4px',
         height: height,
         width: width,
         margin: margin,
         // set the color as state,
-        backgroundColor: buttonColor,
-        boxShadow: '0px 0px 12px #4f4f4f',
+        backgroundColor: enabled ? buttonColor : 'grey',
+        boxShadow: shadow ? '0px 0px 6px #4f4f4f' : '',
         cursor: 'pointer'
     }
 
@@ -46,7 +46,8 @@ export default function BigButton(props) {
     return (
     <div style={rootStyle}
         onMouseEnter={event => handleOnMouseEnter(event)}
-        onMouseLeave={event => handleOnMouseLeave(event)}>
+        onMouseLeave={event => handleOnMouseLeave(event)}
+        onClick={onClick}>
         <div style={textStyle}>{text}</div>
     </div>
     )

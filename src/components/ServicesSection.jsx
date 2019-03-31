@@ -12,9 +12,9 @@ import ServiceBox from './ServiceBox';
 export default function ServicesSection() {
 
     return (
-        <div style={rootStyle}>
+        <div className="services" style={rootStyle}>
             <span style={headingStyle}>Our consulting services focus on innovation and economic development.</span>
-            <ServiceBox heading={"Design and Development"}
+            <ServiceBox heading={"Innovation for Development"}
                 text={"We consult in the development of industrial and science technology parks, incubation and technology centres."}
                 src={rocket_service}/>
             <div style={endServiceContainerStyle}>
