@@ -44,7 +44,7 @@ export default function AboutTitle(props) {
                 }>
             </line>
         </svg>
-        <span style={textStyle}>Corporate Solutions specializes in consulting and advisory services to win and manage projects, funded generally by international institutions which foster economic development. It is a Global Partner of the <a href="https://tenstep.com/">TENSTEP PROJECT MANAGEMENT GROUP</a> and the leader of the Innovation Management practice, made up of several global offices led by Spain, which coordinates the group's practice, plus TenStep offices in Tunisia, Poland, Guatemala, Ecuador.</span>
+        <span style={textStyle}><span style={{fontWeight: 'bold'}}>Corporate Solutions S.A.</span>, the member of <a href="https://tenstep.com/">Tenstep Consulting Group</a>, based in Spain, specializes in consulting and advisory services to win and manage projects, funded generally by international institutions which foster economic development. It is a Global Partner of the Tenstep group and the leader of the Innovation Management practice, made up of several offices led by Spain, which coordinates the group's practice, plus TenStep offices in Tunisia, Poland, Guatemala, Ecuador.</span>
         {text2 !== undefined ? <span style={textStyle}>Combined with the expertise of Consortium members of other European consulting firms we bid and implement international assignments in emerging countries. Since 1999 we have garnered substantial experience in business innovation —especially the feasibility and support of innovation and entrepreneurship structures, such as science and technology parks and areas, incubation centres and hubs.</span> : <React.Fragment/>}
     </div>
     )

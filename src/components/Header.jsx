@@ -37,9 +37,12 @@ export default function Header(props) {
                 titleStyle={imageStyle}/>
         </Link>
         <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-50} duration={500}>
-            <Button title={'tenstep.es'}
+            <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
+                <Button title={'tenstep'}
                 titleStyle={headingStyle}
                 hover={false}/>
+            <span style={headingSmallStyle}>corporate solutions</span>
+            </div>
         </Link>
                 <div style={{alignSelf: 'flex-end', marginBottom: '4px'}}>
                 <HeaderLinks/>
@@ -53,6 +56,17 @@ const headingStyle = {...R.styles.heading,
     fontSize: '38px',
     fontWeight: '900',
     paddingLeft: '1rem',
+    marginRight: '1rem',
+    whiteSpace: 'nowrap',
+    textOverflow: 'ellipsis',
+    color: R.colours.tenstepBlue
+}
+
+// heading style,
+const headingSmallStyle = {...R.styles.heading,
+    fontSize: '24px',
+    fontWeight: '900',
+    paddingLeft: '0.2rem',
     marginRight: '1rem',
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',

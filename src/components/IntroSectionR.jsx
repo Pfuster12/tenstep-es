@@ -59,11 +59,14 @@ export default function IntroSectionR() {
                     justifyContent: 'center',
                     boxShadow: '0px 2px 6px grey'
                     }}>
-                              <Button image={logo_pyramid}
-                                titleStyle={imageStyle}/>
-                            <Button title={R.strings.corpsolutions}
-                                titleStyle={headingStyle}
-                            hover={false}/>
+                        <Button image={logo_pyramid}
+                            titleStyle={imageStyle}/>
+                        <div style={{display: 'flex', justifyContent: 'flex-start', alignItems: 'center'}}>
+                        <Button title={'tenstep'}
+                            titleStyle={headingStyle}
+                        hover={false}/>
+                        <span style={headingSmallStyle}>corporate solutions</span>
+                        </div>
                     </div>
                 </MediaQuery>
                 {/* The first header */}
@@ -131,6 +134,17 @@ const headingStyle = {...R.styles.heading,
     paddingLeft: '2px',
     marginTop: '24px',
     marginRight: '1rem',
+    textOverflow: 'ellipsis',
+    color: R.colours.tenstepBlue
+}
+
+// heading style,
+const headingSmallStyle = {...R.styles.heading,
+    fontSize: '24px',
+    fontWeight: '900',
+    paddingLeft: '0.2rem',
+    marginRight: '1rem',
+    whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
     color: R.colours.tenstepBlue
 }
