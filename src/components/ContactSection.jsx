@@ -53,7 +53,9 @@ export default function ContactSection() {
              emailjs.send(service_id, template_id, template_params)
              .then((response) => {
                 console.log('SUCCESS!', response.status, response.text);
+                window.parent.alert('Thank you, we will contact you shortly.')
              }, (error) => {
+                window.parent.alert('There was an error sending your details, please try again.')
                 console.log('FAILED...', error);
              });
         }

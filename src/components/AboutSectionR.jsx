@@ -16,17 +16,13 @@ import Title from './Title';
 import slope from '../assets/sloping_up.svg'
 import ImageButton from './ImageButton'
 import MediaQuery from 'react-responsive'
+import AboutTitle from './AboutTitle';
 
 /**
  * Displays the About Section.
  * @function
  */
 export default function AboutSectionR() {
-
-    // About Text,
-    const aboutText = "Corporate Solutions specializes in consulting and advisory services to win and manage projects, funded generally by international institutions which foster economic development. It is a TenStep group practice is made up of several global offices led by Spain, which coordinates the group's practice, plus TenStep offices in Tunisia, Poland, Guatemala, Ecuador."
-    const aboutText2 = "Combined with the expertise of Consortium members of other European consulting firms we bid and implement international assignments in emerging countries. Since 1999 we have garnered substantial experience in business innovation —especially the feasibility and support of innovation and entrepreneurship structures, such as science and technology parks and areas, incubation centres and hubs."
-
     return (
         <div className="about" style={
             {
@@ -48,9 +44,7 @@ export default function AboutSectionR() {
                     flexDirection: 'row'
                 }
             }>
-                <Title title={"About Us"}
-                        text={aboutText}
-                        text2={aboutText2}/>
+                <AboutTitle/>
                 <div style={
                     {
                         display: 'flex',

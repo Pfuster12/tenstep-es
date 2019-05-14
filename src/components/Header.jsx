@@ -37,7 +37,7 @@ export default function Header(props) {
                 titleStyle={imageStyle}/>
         </Link>
         <Link activeClass="active" to="intro" spy={true} smooth={true} offset={-50} duration={500}>
-            <Button title={R.strings.corpsolutions}
+            <Button title={'tenstep.es'}
                 titleStyle={headingStyle}
                 hover={false}/>
         </Link>
