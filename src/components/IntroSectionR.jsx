@@ -123,17 +123,6 @@ export default function IntroSectionR() {
                     firms and institutions through our internationally and privately-funded projects 
                     on how to confront the social distancing and expected post-crisis economic restructuring periods.
                 </span>
-                <iframe
-                src="https://cdn.intelligence.weforum.org/iframe.html?openinnewwindow=true&text=COVID-19&apikey=my-api-key"
-                name="intelligenceWidgetIframe"
-                scrolling="no"
-                frameBorder="0px"
-                marginHeight="0px"
-                marginWidth="0px"
-                height="300px"
-                width="300px"
-                >
-                </iframe>
             <Link  activeClass="active" to="contact" spy={true} smooth={true} offset={-50} duration={500}>
                 <BigButton text={"Contact and request resources"}
                     color={R.colours.tenstepRedLighter}
