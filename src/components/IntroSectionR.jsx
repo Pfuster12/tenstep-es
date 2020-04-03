@@ -100,8 +100,40 @@ export default function IntroSectionR() {
                         fontSize: '18px',
                     }
                 }>
-                    With work spanning more than 100 countries and the TenStep network, we can offer help in any part of the world.
+                    With work spanning more than 100 countries and the TenStep network, we can offer
+                     help in any part of the world.
                 </span>
+
+                <span style={{
+                    ...R.styles.text,
+                    backgroundColor: 'rgba(196, 148, 0, 0.6)',
+                    border: 'solid 1px rgba(196, 148, 0)',
+                    borderRadius: '6px',
+                    marginTop: '2px',
+                    marginLeft: '64px',
+                    marginRight: '64px',
+                    fontSize: '14px',
+                    padding: '20px',
+                    opacity: 1,
+                    color: R.colours.white
+                }}>
+                    We hope all our clients, partners and associated consultants stay safe during 
+                    this difficult period of COVID-19 pandemic, and assure them we continue our work
+                    online, and on the field when travel is allowed again. We are actively mentoring
+                    firms and institutions through our internationally and privately-funded projects 
+                    on how to confront the social distancing and expected post-crisis economic restructuring periods.
+                </span>
+                <iframe
+                src="https://cdn.intelligence.weforum.org/iframe.html?openinnewwindow=true&text=COVID-19&apikey=my-api-key"
+                name="intelligenceWidgetIframe"
+                scrolling="no"
+                frameBorder="0px"
+                marginHeight="0px"
+                marginWidth="0px"
+                height="300px"
+                width="300px"
+                >
+                </iframe>
             <Link  activeClass="active" to="contact" spy={true} smooth={true} offset={-50} duration={500}>
                 <BigButton text={"Contact and request resources"}
                     color={R.colours.tenstepRedLighter}

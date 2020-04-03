@@ -38,7 +38,7 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             {
-                from: './src/assets/favicon.ico'
+                from: './favicon-32x32.png'
             },
         ])
     ],

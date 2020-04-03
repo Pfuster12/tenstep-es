@@ -17,7 +17,7 @@ import competitivenesspdf from "../assets/competitiveness_factors.pdf";
 import sustainabilitypdf from "../assets/sustainability_methods.pdf";
 import fishingpdf from "../assets/euro_fishing.pdf";
 import maputopdf from "../assets/incubators_maputo.pdf";
-import devcentrespdf from "../assets/dev_centres_dfc.pdf";
+import guidelinespdf from "../assets/guidelines_covid19.pdf"
 import SideScroller from './SideScroller';
 import MediaQuery from 'react-responsive'
 
@@ -106,8 +106,8 @@ export default function ResourcesSection() {
                             link={maputopdf}/>
                         <ImageButton src={pdf}
                             imageStyle={imageStyle}
-                            text={'Business Development Centres in Development Services and Centres 1999 (English)'} 
-                            link={devcentrespdf}/>
+                            text={'Guidelines of Mentoring Programme on Business Model Innovation post COVID-19 Crisis Mentoring EN v1'} 
+                            link={guidelinespdf}/>
                     </div>
                     </div>}/>
              </MediaQuery>
@@ -170,10 +170,10 @@ export default function ResourcesSection() {
                             imageStyle={imageStyle}
                             text={'Presentation of Pilot Business Incubators in Maputo and Machava in Mozambique 2011 (Portuguese)'} 
                             link={maputopdf}/>
-                        <ImageButton src={pdf}
+                         <ImageButton src={pdf}
                             imageStyle={imageStyle}
-                            text={'Business Development Centres in Development Services and Centres 1999 (English)'} 
-                            link={devcentrespdf}/>
+                            text={'Guidelines of Mentoring Programme on Business Model Innovation post COVID-19 Crisis Mentoring (English)'} 
+                            link={guidelinespdf}/>
                     </div>
                     </div>}/>
              </MediaQuery>

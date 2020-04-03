@@ -85,7 +85,7 @@ export default function ContactSection() {
     // return views,
     return (
     <div className="contact" style={rootStyle}>
-            <div style={
+        <div style={
                     {
                         display: 'flex', 
                         flexDirection: 'column',
@@ -93,40 +93,34 @@ export default function ContactSection() {
                         paddingLeft: '6vw'
                     }
                 }>
-     <Title strokeColor={R.colours.white}
-                title={'Interested?'}
-                text={"Contact us for more information and questions."}/>
-        
-                <span style={textStyle}>{R.strings.contact_name_title}</span>
-                <input onChange={nameOnChange} size="5" style={inputStyle}/>
-                <span style={textStyle}>{R.strings.contact_email_title}</span>
-                <input onChange={emailOnChange} size="5" type="email" style={inputStyle}/>
-                <span style={textStyle}>{R.strings.contact_instituion_title}</span>
-                <input onChange={institutionOnChange} size="5"  style={inputStyle}/>
-                <span style={textStyle}>{R.strings.contact_comments_title}</span>
-                <textarea onChange={messageOnChange} style={textAreaStyle}
-                placeholder={"Write any comments you would like to add to your request..."}/>
-                   <div style={{width: '10px', height: '16px'}}/>
-                   
-                <Reaptcha sitekey={'6LdtJJsUAAAAAJ8ezKs2LBcQcSrzaAgX6vdzoALS'}
-                    onVerify={onVerify}/>
-                {<BigButton 
-                    onClick={submitForm}
-                    text={"SUBMIT"}
-                    enabled={enabled && verified}
-                    color={R.colours.tenstepRedLighter}
-                    highlightColor={R.colours.tenstepRedLighterer}
-                    width={'180px'}
-                    height={'60px'}
-                    margin={'24px'}/> }
-            </div>
+        <Title strokeColor={R.colours.white}
+                    title={'Interested?'}
+                    text={"Contact us for more information and questions."}/>
+           <div style={
+                    {
+                        display: 'flex', 
+                        flexDirection: 'row',
+                        flex: 1
+                    }
+                }>
+        <iframe 
+            width="540" 
+            height="880" 
+            src="https://b02eabfa.sibforms.com/serve/MUIEAIJd_SbsbqUGtIiZTFTBo5dNLMuu0-5sg4d4pcTwVYSKsEi7OlrXT37WsmtoRR7bxqw3bixDsIrofilXNfEbT_nQs-zKpFTUdwZNrNuH5dIeUkZN70f_opcyoAzKmJtY_fHM3BkYXRN4ItJXoPbL9fF-EuLDBScHL_YNqyLTgCuIL0iIJnP9g6qgHbkj9_3gYUi9MnRuExzc"
+            frameBorder="0" 
+            scrolling="auto" 
+            allowFullScreen
+            style={{display: 'block', marginLeft: 'auto', marginRight: 'auto',maxWidth: '100%'}}>
+
+        </iframe>
             <MediaQuery query="(min-width: 800px)">
             <div style={
                 {
                     display: 'flex',
                     flex: 1,
                     flexDirection: 'column',
-                    paddingTop: '42px'
+                    paddingTop: '42px',
+                    paddingLeft: '42px'
                 }
             }>
             <img style={
@@ -154,6 +148,8 @@ export default function ContactSection() {
             </div>
             </div>
             </MediaQuery>
+        </div>
+            </div>
     </div>
     )
 }

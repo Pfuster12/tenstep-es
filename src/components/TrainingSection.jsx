@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import R from 'res/R';
-import ServiceBox from './ServiceBox';
 import iaoip from '../assets/iaoip_logo.png'
+import gim from '../assets/gim_logo.png'
 import pmi from '../assets/pmi_logo.png'
 import ecbl from '../assets/ecbl_logo.png'
 import Title from './Title';
-import Button from './Button';
 import ImageButton from './ImageButton';
 import MediaQuery from 'react-responsive'
 
@@ -50,6 +48,11 @@ export default function TrainingSection() {
                     noText={true}
                     link={'https://www.iaoip.org/page/Certification'}
                     imageStyle={imageStyle}/>
+                <ImageButton src={gim} 
+                    text={'GIM Institute'}
+                    noText={true}
+                    link={'www.giminstitute.org'}
+                    imageStyle={imageStyle}/>
                 <ImageButton src={pmi} 
                     text={'Project Management Institute'}
                     link={'https://www.pmi.org/certifications/types'}
@@ -75,6 +78,11 @@ export default function TrainingSection() {
                     text={'IAIOP'}
                     noText={true}
                     link={'https://www.iaoip.org/page/Certification'}
+                    imageStyle={imageStyle}/>
+                <ImageButton src={gim} 
+                    text={'GIM Institute'}
+                    noText={true}
+                    link={'www.giminstitute.org'}
                     imageStyle={imageStyle}/>
                 <ImageButton src={pmi} 
                     text={'Project Management Institute'}

@@ -4,7 +4,6 @@ import julioPic from '../assets/julio_profile.png'
 import mochalPic from '../assets/tom_mochal.jpg'
 import kumarPic from '../assets/himanshu_kumar.jpg'
 import braggPic from '../assets/chris_bragg.png'
-import dickinsonPic from '../assets/dickinson.jpg'
 import hectorPic from '../assets/hector_perez.jpg'
 import josePic from '../assets/jfulle.jpg'
 import mohamedPic from '../assets/mohamed_ghodbane.jpg'
@@ -120,7 +119,6 @@ export default function AboutSectionR() {
                     <ProfileImage src={mochalPic} text={"Tom Mochal"} location={'Atlanta, USA'}/>
                     <ProfileImage src={kumarPic} text={"Himanshu Kumar"} location={'New York, USA'}/>
                     <ProfileImage src={braggPic} text={"Chris Bragg"} location={'Bahrain, Middle East'}/>
-                    <ProfileImage src={dickinsonPic} text={"Dickinson Agyapong"} location={'Ghana, West Africa'}/>
                     <ProfileImage src={hectorPic} text={"Hector Perez"} location={'Guatemala, Central America'}/>
                     <ProfileImage src={josePic} text={"Jose Gonzalez Fulle"} location={'Chile, South America'}/>
                     <ProfileImage src={mohamedPic} text={"Mohamed Ghodbane"} location={'Tunisia, North Africa'}/>
@@ -156,7 +154,7 @@ export default function AboutSectionR() {
                     }
                 }>
                     <ProfileImage src={braggPic} text={"Chris Bragg"} location={'Bahrain, Middle East'}/>
-                    <ProfileImage src={dickinsonPic} text={"Dickinson Agyapong"} location={'Ghana, West Africa'}/>
+                    <ProfileImage src={josePic} text={"Jose Gonzalez Fulle"} location={'Chile, South America'}/>
                     <ProfileImage src={hectorPic} text={"Hector Perez"} location={'Guatemala, Central America'}/>
                 </div>
                 <div style={
