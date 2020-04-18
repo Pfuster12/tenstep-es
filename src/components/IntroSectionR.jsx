@@ -104,18 +104,6 @@ export default function IntroSectionR() {
                      help in any part of the world.
                 </span>
                 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
-                <iframe
-                    src="https://cdn.intelligence.weforum.org/iframe.html?openinnewwindow=true&text=COVID-19&apikey=beb0cd39-720d-43be-9307-1bb1950f7eea"
-                    style={{padding: '16px', margin: '16px', border:'0px solid white', backgroundColor: 'white', borderRadius: '6px'}}
-                    name="intelligenceWidgetIframe"
-                    scrolling="no"
-                    frameBorder="0px"
-                    marginHeight="0px"
-                    marginWidth="0px"
-                    height="50px"
-                    width="300px"
-                    >
-                    </iframe>
                 <span style={{
                     ...R.styles.text,
                     backgroundColor: 'rgba(196, 148, 0, 0.6)',
