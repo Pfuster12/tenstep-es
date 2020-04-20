@@ -7,6 +7,7 @@ import BigButton from './BigButton';
 import Button from './Button';
 import logo_pyramid from '../assets/pyramid_logo.png'
 import { Link, animateScroll as scroll } from "react-scroll";
+import smemethodology from "../assets/sme_methodology.pdf";
 
 /**
  * Handles the intro section.
@@ -104,6 +105,24 @@ export default function IntroSectionR() {
                      help in any part of the world.
                 </span>
                 <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>
+                <span style={{
+                    ...R.styles.text,
+                    backgroundColor: '#fff',
+                    fontWeight: 'bold',
+                    border: 'solid 1px #CDCDCD',
+                    borderRadius: '6px',
+                    marginTop: '2px',
+                    marginLeft: '64px',
+                    marginRight: '64px',
+                    marginBottom: '32px',
+                    textAlign: 'center',
+                    fontSize: '14px',
+                    maxWidth: '500px',
+                    padding: '20px',
+                    opacity: 1,
+                    color: '#000'
+                }}>
+                Read our <a href={smemethodology}>methodology for SME recovery post COVID-19</a> being applied oin various UNDP, EU and GIZ funded programmes.</span>
                 <span style={{
                     ...R.styles.text,
                     backgroundColor: 'rgba(196, 148, 0, 0.6)',

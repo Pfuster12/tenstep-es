@@ -17,6 +17,7 @@ import competitivenesspdf from "../assets/competitiveness_factors.pdf";
 import sustainabilitypdf from "../assets/sustainability_methods.pdf";
 import fishingpdf from "../assets/euro_fishing.pdf";
 import maputopdf from "../assets/incubators_maputo.pdf";
+import smemethodology from "../assets/sme_methodology.pdf";
 import guidelinespdf from "../assets/guidelines_covid19.pdf"
 import SideScroller from './SideScroller';
 import MediaQuery from 'react-responsive'
