@@ -1,19 +1,24 @@
 <!doctype html>
-<html style="height: 100%; width: 100%; display: flex; flex-direction: column;  overflow-y: scroll; overflow-x: hidden">
+<html>
   <head>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta charset="UTF-8">
       <meta name="description" content="Corpsolutions">
       <meta name="keywords" content="Project Management, Corpsolutions">
-      <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-      <link rel="icon" 
-      type="image/png" 
+      <link rel="icon"
+      type="image/png"
       href="favicon-32x32.png">
-    <title>Tenstep - Corporate Solutions</title>
+    <title>Corporate Solutions</title>
   </head>
-  <body  style="display: flex; margin: 0px; flex: 1;">
-      <div id="root" style="display: flex; flex: 1; margin: 0"></div>
-    <script type="text/javascript" src="/bundle.js"></script>
+  <body>
+      <div id="root"></div>
+    <script type="text/javascript" src="bundle.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/7.17.1/firebase-app.js"></script>
+
+    <script src="/__/firebase/7.17.1/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
   </body>
 </html>

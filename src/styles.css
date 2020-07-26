@@ -1,0 +1,140 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+:root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: black;
+    --background: white;
+    --footer-color: #fafafa;
+    --hover: whitesmoke;
+    --heading-color: #292922;
+    --bg-switch: rgb(245, 223, 195);
+    --defaultFontSize: 12px;
+}
+
+[data-theme="dark"] {
+    --primary-color: hsl(242, 788%, 77%);
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --background: #26262b;
+    --footer-color: #2d2d33;
+    --hover: #292944;
+    --heading-color: #818cab;
+    --bg-switch: #9A97F3;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/Inter-Thin-slnt=0.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/Inter-ExtraLight-slnt=0.ttf');
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/Inter-Light-slnt=0.ttf');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/Inter-Regular-slnt=0.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/Inter-Medium-slnt=0.ttf');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/Inter-SemiBold-slnt=0.ttf');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/Inter-Bold-slnt=0.ttf');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/Inter-ExtraBold-slnt=0.ttf');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/Inter-Black-slnt=0.ttf');
+    font-weight: 900;
+}
+
+::selection {
+    background-color: yellow;
+}
+
+html, body {
+    font-family: 'Inter',sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: var(--defaultFontSize);
+    color: var(--font-color);
+}
+
+a {
+    cursor: pointer;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 3.4rem;
+    font-weight: bold;
+    line-height: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+h5 {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+h6 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.4rem;
+    line-height: 2.2rem
+}
