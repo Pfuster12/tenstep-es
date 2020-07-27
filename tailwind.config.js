@@ -5,6 +5,9 @@ module.exports = {
                 'primary': '#302AE6',
                 'secondary': '#536390',
                 'danger': '#e3342f',
+            },
+            fontSize: {
+                'welcome': '2.4rem'
             }
         }
     }
